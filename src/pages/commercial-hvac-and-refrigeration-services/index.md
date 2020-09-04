@@ -3,95 +3,80 @@ templateKey: 'commercial-hvac-page'
 path: /commercial-hvac-and-refrigeration-services
 title: Commercial HVAC and Refrigeration Services
 metadescription: "Need an inbound marketing agency in Orange County? Try Human Marketing. We tie every marketing dollar you spend to real revenue goals."
-heading: Commercial HVAC and Refrigeration Services
-image: /img/jumbotron.jpg
-intro:
+header: Commercial HVAC and Refrigeration Services
+subheader: 24/7, Expert Service Where & When You Need It
+herocta: Contact Now
+description: Call Now For Immediate Service
+image: /img/hvac-hero-2-2x.jpg
+leadingbusiness:
+  header: Leading Businesses Choose FASTECH HVAC & Refrigeration
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/icon-cutting-edge-2x.png
+      header: Cutting-Edge Technology
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+        Save on utilities and get the cleanest air possible. It’s a win-win for your organization, employee health and the environment.
+    - image: /img/icon-experien-2x.png
+      header: Unrivaled Experience
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
+        Our team has decades of experience servicing massive enterprises to local businesses. You’ll have a partner you can rely on when you need them.
+    - image: /img/icon-service-2x.png
+      header: Interruption-Free Service
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+        No price gouging or unnecessary upgrades. Just high-quality, expert service that keeps your HVAC or refrigeration system running smoothly with minimal interruption.  
 main:
-  heading: Great coffee with no compromises
+  heading: It's time to take care of your cooling and refrigeration service
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
-testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
-pricing:
-  heading: Monthly subscriptions
-  description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
-  plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
-      items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
-      items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
-      items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '??'
+    Stop taking shortcuts when it comes to your HVAC system. With the right service provider and maintenance schedule, you’ll not only save on utility costs, but you’ll have a high-performing cooling system that will last you for years to come.
+  items:
+    - Anti-COVID ionizing & air purification technology
+    - Responsive, experienced crews available 24/7
+    - Reduce utility costs and minimize downtime
+    - Full installation, maintenance and upgrade services
+    - 50+ years of experience in cooling and refrigeration
+pathogenfiltration:
+  heading: Reduce Airborne Virus Through Better Indoor Air
+  subheading1: What is NPBI?
+  text1: >
+    Needlepoint bipolar ionization (NPBI) technology purifies indoor air, by eliminating airborne particles, pathogens and odors, including COVID-19. An independent lab test showed GPS air technology had a 90% rate of reduction of coronavirus particles.
+  subheading2: What are the benefits?
+  items:
+    - Kills pathogens, including bacteria, viruses & mold
+    - Energy savings up to 30%
+    - Neutralizes odor
+    - Produces zero ozone or harmful byproducts
+  subheading3: Do I need to replace my entire HVAC system?
+  text3: >
+    No. GPS technology can be installed in most HVAC systems.
+  image: /img/hvac-airQuality-2x.jpg
+industriesserved:
+  heading: Industries Served
+  description: >
+    Our expert team has provided cooling and refrigeration services for thousands of clients across nearly every industry, including:
+  items1:
+    - Pharmacies
+    - Retail stores
+    - Restaurants & chains
+    - Warehouses
+    - Green Houses
+  items2:
+    - Car dealerships
+    - Convenience stores
+    - Office buildings
+    - Hotels
+    - Bakeries
+serviceareas:
+  heading: Service Areas
+  items1:
+    - HVAC/R maintenance
+    - Coolers, freezers, walk-In's, reach-In's
+    - Ice machines
+  items2:
+    - Environmental & server rooms
+    - Agricultural climate control (Wineries, produce & more)
+bottomcta:
+  image: /img/FT-2020-hvac-footer-lines.png
+  header: Ready to Upgrade Your HVAC or Refrigeration Services?
+  subheader: > 
+    Our expert team has provided cooling and refrigeration services for thousands of clients across nearly every industry.
+  cta: Contact Us Now
 ---

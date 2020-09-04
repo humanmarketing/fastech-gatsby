@@ -11,6 +11,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html lang="en" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet"></link>
         <title>{title}</title>
         <meta name="description" content={description} />
 

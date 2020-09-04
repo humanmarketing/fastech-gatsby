@@ -2,106 +2,205 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
+import logo from '../img/ft-logo.png'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
+import IconText from '../components/IconText'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const CommercialHvacPageTemplate = ({
   image,
   title,
-  heading,
+  header, 
+  subheader,
+  herocta,
   description,
-  intro,
+  leadingbusiness,
   main,
-  testimonials,
-  fullImage,
-  pricing,
+  pathogenfiltration,
+  industriesserved,
+  serviceareas,
+  bottomcta, 
   helmet,
-}) => (
-  <div className="content">
+}) => (  
+  <div className="content"> 
     {helmet || ''}
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-          backgroundColor: '#f40',
-          color: 'white',
-          padding: '1rem',
-        }}
-      >
-        {title}
-      </h2>
-    </div>
-    <section className="section section--gradient">
+    <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
       <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
-              <div className="columns">
-                <div className="column is-7">
+        <div className="navbar-brand">
+          <a href="http://www.fastechus.com/" className="navbar-item nav-logo" title="Logo">
+            <img src={logo} alt="Fastech" style={{ width: '200px' }} />
+          </a>
+          <p>Commercial HVAC and Refrigeration Services</p>
+        </div>      
+        <div className="navbar-end has-text-centered">
+          <p><strong>24/7 SERVICE</strong></p>
+          <a className="nav-tel" href="tel:714-844-5128" target="_blank" rel="noopener noreferrer">
+            714-844-5128
+          </a>
+        </div>      
+      </div>
+    </nav> 
+    <div className="full-width-image-container margin-top-0 hero" style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }} >
+       <section>
+        <div className="container">
+            <div className="hero-textbox">
+              <h1 className="has-text-weight-semibold is-size-3">{header}</h1>
+              <p><strong>{subheader}</strong></p>
+              <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn primary-btn">
+                {herocta}
+              </a>               
+              <div style={{marginTop:'10px'}}><a className="tel" href="tel:714-844-5128" target="_blank" rel="noopener noreferrer">
+                714-844-5128 
+              </a></div>
+              <p>{description}</p> 
+            </div>  
+        </div>
+       </section>
+    </div>
+    <section className="section section--gradient has-text-white-ter time-for-care">
+        <div className="container">
+            <div className="columns">
+                <div className="column is-offset-1 is-5" style={{display: 'flex', alignItems: 'center',}}>
                   <h3 className="has-text-weight-semibold is-size-3">
                     {main.heading}
                   </h3>
+                </div>
+                <div className="column is-offset-1 is-5">                  
                   <p>{main.description}</p>
+                  <ul>
+                    {main.items.map((item) => ( 
+                      <li key={item} className="is-size-6">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-              <div className="tile is-ancestor">
-                <div className="tile is-vertical">
-                  <div className="tile">
-                    <div className="tile is-parent is-vertical">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image1} />
-                      </article>
-                    </div>
-                    <div className="tile is-parent">
-                      <article className="tile is-child">
-                        <PreviewCompatibleImage imageInfo={main.image2} />
-                      </article>
-                    </div>
-                  </div>
-                  <div className="tile is-parent">
-                    <article className="tile is-child">
-                      <PreviewCompatibleImage imageInfo={main.image3} />
-                    </article>
-                  </div>
+            </div>   
+        </div>
+    </section>
+    <section className="section section--gradient leading-business-wrapper">
+      <div className="container">
+        <div className="section">
+          <div className="columns">
+            <div className="column is-10 is-offset-1 has-text-centered">
+                <div style={{maxWidth: '500px', margin: 'auto'}}>
+                  <h2>{leadingbusiness.header}</h2>
                 </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{
-                  backgroundImage: `url(${
-                    fullImage.childImageSharp
-                      ? fullImage.childImageSharp.fluid.src
-                      : fullImage
-                  })`,
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-10 is-offset-1">   
+              <div className="leading-business">
+                <div className="icon-text">
+                  <IconText gridItems={leadingbusiness.blurbs} />
+                </div>              
+                <div className="has-text-centered">
+                  <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn secondary-btn">
+                    Get Started 
+                  </a>
+                </div>
+              </div>                            
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section className="section section--gradient pathogen-filtration">
+      <div className="container">
+          <div className="columns">
+            <div className="column is-6">
+              <div className="pathogen-filtration-text">
+                <h2>{pathogenfiltration.heading}</h2>
+                <h3>{pathogenfiltration.subheading1}</h3>
+                <p>{pathogenfiltration.text1}</p>
+                <h3>{pathogenfiltration.subheading2}</h3>
+                <ul>
+                  {pathogenfiltration.items.map((item) => (  
+                    <li key={item} className="is-size-6">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <h3>{pathogenfiltration.subheading3}</h3>
+                <p>{pathogenfiltration.text3}</p>
+              </div>
+            </div>
+            <div className="column is-6">
+                <div className="image-wrapper"
+                  style={{
+                    width: '100%',
+                    display: 'inline-block',
+                  }}
+                >
+                  <PreviewCompatibleImage imageInfo={pathogenfiltration.image} />
+                </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section className="section section--gradient  has-text-white-ter industries">
+      <div className="container">
+          <div className="columns industries-served">
+            <div className="column is-3">
+              <h2>{industriesserved.heading}</h2>
+              <p>{industriesserved.description}</p>              
+            </div>            
+            <div className="column is-offset-1 is-4"> 
+              <ul>
+                {industriesserved.items1.map((item) => (
+                  <li key={item} className="is-size-5"> 
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="column is-4">
+              <ul>
+                {industriesserved.items2.map((item) => (
+                  <li key={item} className="is-size-5">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="columns service-areas">
+            <div className="column is-3">
+              <h2>{serviceareas.heading}</h2>                         
+            </div>            
+            <div className="column is-offset-1 is-4">
+              <ul>
+                {serviceareas.items1.map((item) => (
+                  <li key={item} className="is-size-5">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="column is-4">
+              <ul>
+                {serviceareas.items2.map((item) => (
+                  <li key={item} className="is-size-5">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+      </div>
+    </section>
+    <PreviewCompatibleImage imageInfo={bottomcta.image} />
+    <section className="section section--gradient bottom-cta">
+      <div className="container">
+          <div className="columns">
+            <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
+              <div className="bottom-cta-text"> 
+                <h2>{bottomcta.header}</h2> 
+                <p>{bottomcta.subheader}</p>
+                <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn secondary-btn">{bottomcta.cta}</a>              
+              </div>
+            </div>            
+          </div>
       </div>
     </section>
   </div>
@@ -110,24 +209,45 @@ export const CommercialHvacPageTemplate = ({
 CommercialHvacPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
+  header: PropTypes.string,
+  subheader: PropTypes.string,
+  herocta: PropTypes.string,
   description: PropTypes.string,
-  intro: PropTypes.shape({
+  leadingbusiness: PropTypes.shape({    
+    header: PropTypes.string,
     blurbs: PropTypes.array,
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    items: PropTypes.array,
   }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
+  pathogenfiltration: PropTypes.shape({
+    heading: PropTypes.string,
+    subheading1: PropTypes.string,
+    text1: PropTypes.string,
+    subheading2: PropTypes.string,
+    items: PropTypes.array,
+    subheading3: PropTypes.string,
+    text3: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  }),
+  industriesserved: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    plans: PropTypes.array,
+    items1: PropTypes.array,
+    items2: PropTypes.array,
+  }),
+  serviceareas: PropTypes.shape({
+    heading: PropTypes.string,
+    items1: PropTypes.array,
+    items2: PropTypes.array,
+  }),
+  bottomcta: PropTypes.shape({
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    header: PropTypes.string,
+    subheader: PropTypes.string,
+    herocta: PropTypes.string,
   }),
   helmet: PropTypes.object,
 }
@@ -136,25 +256,30 @@ const CommercialHvacPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
-      <CommercialHvacPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
-        helmet={
-          <Helmet titleTemplate="%s | Fastech">
-            <title>{`${frontmatter.title}`}</title>
-            <meta name="description" content={`${frontmatter.metadescription}`} />       
-          </Helmet>
-        }  
-      />
-    </Layout>
+    <div className="commercial-hvac-pg"> 
+      <Layout>
+        <CommercialHvacPageTemplate
+          image={frontmatter.image}
+          title={frontmatter.title}
+          header={frontmatter.header}
+          subheader={frontmatter.subheader}
+          herocta={frontmatter.herocta}
+          description={frontmatter.description}
+          leadingbusiness={frontmatter.leadingbusiness}
+          main={frontmatter.main}
+          pathogenfiltration={frontmatter.pathogenfiltration}
+          industriesserved={frontmatter.industriesserved}
+          serviceareas={frontmatter.serviceareas}
+          bottomcta={frontmatter.bottomcta}
+          helmet={
+            <Helmet titleTemplate="%s | Fastech">
+              <title>{`${frontmatter.title}`}</title>
+              <meta name="description" content={`${frontmatter.metadescription}`} />       
+            </Helmet>
+          }  
+        />
+      </Layout>
+    </div>
   )
 }
 
@@ -175,81 +300,72 @@ export const commercialHvacPageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 2048, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        heading
+        header
+        subheader
+        herocta
         description
-        intro {
+        leadingbusiness {
+          header
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 40, quality: 64) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
+            header
             text
-          }
-          heading
-          description
+          }                    
         }
         main {
           heading
           description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
+          items
+        }
+        pathogenfiltration {
+          heading
+          subheading1
+          text1
+          subheading2
+          items
+          subheading3
+          text3
+          image {
+            childImageSharp {
+              fluid(maxWidth: 720, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
         }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
+        industriesserved {
           heading
           description
-          plans {
-            description
-            items
-            plan
-            price
+          items1
+          items2
+        }
+        serviceareas {
+          heading
+          items1
+          items2
+        }
+        bottomcta {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 60) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
+          header
+          subheader
+          cta
         }
       }
     }
