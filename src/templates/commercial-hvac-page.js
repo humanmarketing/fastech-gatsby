@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-export const ProductPageTemplate = ({
+export const CommercialHvacPageTemplate = ({
   image,
   title,
   heading,
@@ -18,8 +18,10 @@ export const ProductPageTemplate = ({
   testimonials,
   fullImage,
   pricing,
+  helmet,
 }) => (
   <div className="content">
+    {helmet || ''}
     <div
       className="full-width-image-container margin-top-0"
       style={{
@@ -105,7 +107,7 @@ export const ProductPageTemplate = ({
   </div>
 )
 
-ProductPageTemplate.propTypes = {
+CommercialHvacPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -127,15 +129,15 @@ ProductPageTemplate.propTypes = {
     description: PropTypes.string,
     plans: PropTypes.array,
   }),
+  helmet: PropTypes.object,
 }
 
-const ProductPage = ({ data }) => {
+const CommercialHvacPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
-      <Navbar />
-      <ProductPageTemplate
+      <CommercialHvacPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -145,12 +147,18 @@ const ProductPage = ({ data }) => {
         testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
+        helmet={
+          <Helmet titleTemplate="%s | Fastech">
+            <title>{`${frontmatter.title}`}</title>
+            <meta name="description" content={`${frontmatter.metadescription}`} />       
+          </Helmet>
+        }  
       />
     </Layout>
   )
 }
 
-ProductPage.propTypes = {
+CommercialHvacPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -158,10 +166,10 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default CommercialHvacPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const commercialHvacPageQuery = graphql`
+  query CommercialHvacPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

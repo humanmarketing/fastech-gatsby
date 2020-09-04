@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import Navbar from '../components/Navbar'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
@@ -59,6 +60,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <Navbar />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}

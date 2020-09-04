@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import Navbar from '../components/Navbar'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -131,6 +131,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Navbar />
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
