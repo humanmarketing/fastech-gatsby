@@ -10,6 +10,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 export const CommercialHvacPageTemplate = ({
   image,
   title,
+  metadescription,
   header, 
   subheader,
   herocta,
@@ -22,7 +23,7 @@ export const CommercialHvacPageTemplate = ({
   bottomcta, 
   helmet,
 }) => (  
-  <div className="content"> 
+  <div className="content">  
     {helmet || ''}
     <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
       <div className="container">
@@ -210,6 +211,7 @@ CommercialHvacPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   header: PropTypes.string,
+  metadescription: PropTypes.string,
   subheader: PropTypes.string,
   herocta: PropTypes.string,
   description: PropTypes.string,
@@ -261,6 +263,7 @@ const CommercialHvacPage = ({ data }) => {
         <CommercialHvacPageTemplate
           image={frontmatter.image}
           title={frontmatter.title}
+          metadescription={frontmatter.metadescription}
           header={frontmatter.header}
           subheader={frontmatter.subheader}
           herocta={frontmatter.herocta}
@@ -298,6 +301,7 @@ export const commercialHvacPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        metadescription
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 80) {

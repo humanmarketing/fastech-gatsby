@@ -10,11 +10,17 @@ const CommercialHvacPagePreview = ({ entry, getAsset }) => {
       <CommercialHvacPageTemplate
         image={getAsset(data.image)}
         title={data.title}
-        heading={data.heading}
-        subheading={data.subheading}
+        metadescription={data.metadescription}
+        header={data.header}
+        subheader={data.subheader}
+        herocta={data.herocta}
         description={data.description}
-        intro={data.intro || { blurbs: [] }}
-        mainpitch={data.mainpitch || {}}
+        leadingbusiness={data.leadingbusiness}
+        main={data.main}
+        pathogenfiltration={data.pathogenfiltration}
+        industriesserved={data.industriesserved}
+        serviceareas={data.serviceareas}
+        bottomcta={data.bottomcta}
       />
     )
   } else {
