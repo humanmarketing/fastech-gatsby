@@ -23,7 +23,7 @@ export const CommercialHvacPageTemplate = ({
   bottomcta, 
   helmet,
 }) => (  
-  <div className="content">  
+  <div className="content">
     {helmet || ''}
     <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
       <div className="container">
@@ -43,18 +43,20 @@ export const CommercialHvacPageTemplate = ({
     </nav> 
     <div className="full-width-image-container margin-top-0 hero" style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }} >
        <section>
-        <div className="container">
-            <div className="hero-textbox">
-              <h1 className="has-text-weight-semibold is-size-3">{header}</h1>
-              <p><strong>{subheader}</strong></p>
-              <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn primary-btn">
-                {herocta}
-              </a>               
-              <div style={{marginTop:'10px'}}><a className="tel" href="tel:714-844-5128" target="_blank" rel="noopener noreferrer">
-                714-844-5128 
-              </a></div>
-              <p>{description}</p> 
-            </div>  
+        <div className="container"> 
+            <div className="hero-textbox-wrapper">
+              <div className="hero-textbox">
+                <h1 className="has-text-weight-semibold is-size-3">{header}</h1>
+                <p><strong>{subheader}</strong></p>
+                <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn primary-btn">
+                  {herocta}
+                </a>               
+                <div style={{marginTop:'10px'}}><a className="tel" href="tel:714-844-5128" target="_blank" rel="noopener noreferrer">
+                  714-844-5128 
+                </a></div>
+                <p>{description}</p> 
+              </div>  
+            </div>
         </div>
        </section>
     </div>
