@@ -46,8 +46,7 @@ const TemplateWrapper = ({ children }) => {
         <meta
           property="og:image"
           content={`${withPrefix('/')}img/ft-logo.png`}
-        />
-        <script type="text/javascript" src="//cdn.calltrk.com/companies/458470846/6c98d5841799741b1ab6/12/swap.js"></script> 
+        /> 
       </Helmet>
       <div>{children}</div>
       <Footer />      
