@@ -35,15 +35,15 @@ export const CommercialHvacPageTemplate = ({
         </div>      
         <div className="navbar-end has-text-centered">
           <p><strong>24/7 SERVICE</strong></p>
-          <a className="nav-tel" href="tel:714-844-5128" target="_blank" rel="noopener noreferrer">
-            714-844-5128
+          <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">
+            800-788-8815
           </a>
         </div>      
       </div>
     </nav> 
     <div className="full-width-image-container margin-top-0 hero" style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }} >
        <section>
-        <div className="container"> 
+        <div className="container">
             <div className="hero-textbox-wrapper">
               <div className="hero-textbox">
                 <h1 className="has-text-weight-semibold is-size-3">{header}</h1>
@@ -51,8 +51,8 @@ export const CommercialHvacPageTemplate = ({
                 <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn primary-btn">
                   {herocta}
                 </a>               
-                <div style={{marginTop:'10px'}}><a className="tel" href="tel:714-844-5128" target="_blank" rel="noopener noreferrer">
-                  714-844-5128 
+                <div style={{marginTop:'10px'}}><a className="tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">
+                  800-788-8815 
                 </a></div>
                 <p>{description}</p> 
               </div>  

@@ -77,6 +77,6 @@ bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your HVAC or Refrigeration Services?
   subheader: > 
-    Our expert team has provided cooling and refrigeration services for thousands of clients across nearly every industry.
+    Give our expert team a call today.
   cta: Contact Us Now
 ---
