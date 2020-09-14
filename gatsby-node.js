@@ -7,8 +7,8 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const { createRedirect } = actions
   createRedirect({
-    fromPath: "/", 
-    toPath: "/commercial-hvac", 
+    fromPath: "https://services.fastechus.com/", 
+    toPath: "https://services.fastechus.com/commercial-hvac", 
     force: true
   })
   return graphql(`
