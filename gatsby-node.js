@@ -5,7 +5,12 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-
+  const { createRedirect } = actions
+  createRedirect({
+    fromPath: "/", 
+    toPath: "/commercial-hvac", 
+    force: true
+  })
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
