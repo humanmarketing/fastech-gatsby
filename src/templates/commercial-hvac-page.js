@@ -87,7 +87,7 @@ export const CommercialHvacPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1 has-text-centered">
                 <div style={{maxWidth: '500px', margin: 'auto'}}>
-                  <h2>{leadingbusiness.header}</h2>
+                  <h2>{leadingbusiness.header}</h2>                  
                 </div>
             </div>
           </div>
@@ -101,6 +101,7 @@ export const CommercialHvacPageTemplate = ({
                   <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn secondary-btn">
                     Get Started 
                   </a>
+                  <p style={{marginTop: '20px'}}>Or give us a call at <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
                 </div>
               </div>                            
             </div>
@@ -198,8 +199,8 @@ export const CommercialHvacPageTemplate = ({
           <div className="columns">
             <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
               <div className="bottom-cta-text"> 
-                <h2>{bottomcta.header}</h2> 
-                <p>{bottomcta.subheader}</p>
+                <h2>{bottomcta.header}</h2>  
+                <p>{bottomcta.subheader} <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
                 <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn secondary-btn">{bottomcta.cta}</a>              
               </div>
             </div>            

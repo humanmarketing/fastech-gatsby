@@ -26,13 +26,13 @@ leadingbusiness:
 main:
   heading: It's time to take care of your cooling and refrigeration service
   description: >
-    Stop taking shortcuts when it comes to your HVAC system. With the right service provider and maintenance schedule, you’ll not only save on utility costs, but you’ll have a high-performing cooling system that will last you for years to come.
+    Don't take advantage of your HVAC system. With the right service provider and maintenance schedule, you’ll not only save on utility costs, but you’ll have a high-performing cooling system that will last you for years to come.
   items:
     - Anti-COVID ionizing & air purification technology
     - Responsive, experienced crews available 24/7
     - Reduce utility costs and minimize downtime
     - Full installation, maintenance and upgrade services
-    - 50+ years of experience in cooling and refrigeration
+    - Decades of experience in cooling and refrigeration
 pathogenfiltration:
   heading: Reduce Airborne Virus Through Better Indoor Air
   subheading1: What is NPBI?
@@ -77,6 +77,6 @@ bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your HVAC or Refrigeration Services?
   subheader: > 
-    Give our expert team a call today.
+    Give our expert team a call today at
   cta: Contact Us Now
 ---

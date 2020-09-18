@@ -15,7 +15,7 @@ const Footer = class extends React.Component {
               </div>
               <div className="column is-8">
                 <section>
-                  <p>Founded in 1988 in Buena Park CA, FASTECH has served thousands of businesses. From permits, heavy construction and facility maintenance to compliance testing and system upgrades, FASTECH has built a nationally recognized reputation for responsive, experienced service and cutting-edge technology.  </p>
+                  <p>Founded in 1998 in Buena Park, CA, FASTECH has helped thousands of clients over their 20+ year history. From design and permitting to new construction, facility maintenance, compliance testing and system upgrades, FASTECH has built a nationally recognized and trusted industry reputation for responsive, experienced service and cutting edge technology.</p>
                 </section>
               </div>              
             </div>
