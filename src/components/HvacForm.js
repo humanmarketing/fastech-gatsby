@@ -22,7 +22,7 @@ export default class HvacForm extends React.Component {
     return (
         <section className="section" style={{padding: '0'}}>
             <div id="mc_embed_signup">
-                <form action="https://fastechus.us2.list-manage.com/subscribe/post?u=1b5912a7a12178df95b8ef6cc&amp;id=f0c1cabfde" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" data-netlify="true"
+                <form action="https://fastechus.us2.list-manage.com/subscribe/post?u=1b5912a7a12178df95b8ef6cc&amp;id=f0c1cabfde" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" data-netlify="true"
             data-netlify-honeypot="bot-field"  novalidate>
                     {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                     <input type="hidden" name="form-name" value="contact" />
@@ -81,7 +81,7 @@ export default class HvacForm extends React.Component {
                         </div>
                     </div>
                     <div className="mc-field-group">
-                        <label for="mce-MMERGE5">Type </label>
+                        <label for="mce-MMERGE5">Services Needed: </label>
                         <select name="MMERGE5" className="" id="mce-MMERGE5">
                             <option ></option>
                             <option value="HVAC">HVAC</option>
