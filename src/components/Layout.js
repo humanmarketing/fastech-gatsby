@@ -12,6 +12,7 @@ const TemplateWrapper = ({ children }) => {
       <Helmet>
         <html lang="en" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet"></link>
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"></link>
         <title>{title}</title>
         <meta name="description" content={description} />
 

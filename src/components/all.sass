@@ -60,6 +60,8 @@ p, span, ul, li, strong
     justify-content: center
     align-items: center
 
+button 
+  border: none
 .btn
     display: inline-block
     padding: 0.8em 2.5em
@@ -107,6 +109,8 @@ p, span, ul, li, strong
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
+  .container
+    padding: 0 30px 30px 30px !important
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -357,3 +361,122 @@ $menu-label-color: $white-ter
             text-align: center
     .pathogen-filtration-text
       padding-top: 10 !important
+
+// THANK YOU PAGE
+.thank-you-pg
+  nav 
+    .navbar-brand
+      align-items: center      
+      p 
+        font-size: 14px        
+    .navbar-end
+      align-items: center      
+      p 
+        font-size: 14px
+        margin-bottom: 0
+        margin-right: 15px
+      .nav-tel
+        font-weight: bold
+        font-size: 24px
+  section.section
+    background-color: $darkblue
+    h1
+      color: white
+      font-size: 44px !important
+      text-align: center
+    p 
+      color: white
+      text-align: center
+    +tablet
+      padding: 10em 2em      
+      background-position: calc(100% - -1px) center
+      background-image: url(/img/FT-2020-hvac-spiral-left.png)
+      background-position: -3px center
+      background-repeat: no-repeat
+      background-size: 110px    
+      display: flex
+      align-items: center
+      height: 600px  
+//Mailchimp Form
+#mc_embed_signup
+  background: #fff
+  clear: left
+  font: 16px $raleway
+  max-width: 700px
+  margin: auto
+  .mc-field-group 
+    label 
+      font-family: $montserrat
+    input 
+      padding: 10px 0
+      font-size: 16px
+      font-family: $raleway
+    select
+      border: 1px solid #ABB0B2
+      border-radius: 3px
+      padding: 10px 0
+      font-size: 16px
+      font-family: $raleway
+    textarea
+      font-size: 16px
+      font-family: $raleway
+    +mobile 
+      width: 96% !important
+  .submit-btn
+    background-color: $blue 
+    text-transform: uppercase
+    font-weight: bold 
+    font-family: $montserrat
+    font-size: 16px 
+    letter-spacing: 1px
+    border-radius: 30px 
+    padding: 0.8em 2.5em 
+    color: white
+    margin: 0  
+
+// Modal
+.ft-modal 
+  .close-button 
+    position: absolute
+    top: 0.5rem
+    right: 0.5rem
+    button 
+      background: none
+      border: none
+      font-size: 16px
+      font-weight: bold
+      &:hover 
+        cursor: pointer  
+  .pop-up-cta 
+    display: inline-block
+  .popup-form
+    &--wrapper 
+      background: rgba(0,0,0,0.8)
+      display: none
+      width: 100%
+      height: 100%
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 1000
+      &.is-active 
+        display: block
+      .popup-form--container 
+        position: absolute
+        width: 600px
+        max-width: 90%
+        height: auto
+        min-height: 300px
+        max-height: 90vh
+        margin: 4rem auto 0
+        padding: 2rem
+        left: 0
+        right: 0
+        z-index: 1001
+        background: #fff
+        text-align: center
+        overflow: scroll
+        +mobile 
+          margin: 2rem auto 2rem

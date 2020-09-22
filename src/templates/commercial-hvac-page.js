@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import logo from '../img/ft-logo.png'
 import Layout from '../components/Layout'
+import HvacForm from '../components/HvacForm'
 import IconText from '../components/IconText'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+
 
 export const CommercialHvacPageTemplate = ({
   image,
@@ -22,7 +24,9 @@ export const CommercialHvacPageTemplate = ({
   serviceareas,
   bottomcta, 
   helmet,
-}) => (  
+}) => { 
+  const [isActive, setActive] = useState(false);
+  return (
   <div className="content">
     {helmet || ''}
     <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
@@ -48,9 +52,9 @@ export const CommercialHvacPageTemplate = ({
               <div className="hero-textbox">
                 <h1 className="has-text-weight-semibold is-size-3">{header}</h1>
                 <p><strong>{subheader}</strong></p>
-                <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn primary-btn">
+                <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                   {herocta}
-                </a>               
+                </button>               
                 <div style={{marginTop:'10px'}}><a className="tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">
                   800-788-8815 
                 </a></div>
@@ -98,9 +102,9 @@ export const CommercialHvacPageTemplate = ({
                   <IconText gridItems={leadingbusiness.blurbs} />
                 </div>              
                 <div className="has-text-centered">
-                  <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn secondary-btn">
+                  <button className="has-text-weight-bold btn secondary-btn" onClick={() => setActive(!isActive)}>
                     Get Started 
-                  </a>
+                  </button>
                   <p style={{marginTop: '20px'}}>Or give us a call at <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
                 </div>
               </div>                            
@@ -170,7 +174,7 @@ export const CommercialHvacPageTemplate = ({
           </div>
           <div className="columns service-areas">
             <div className="column is-3">
-              <h2>{serviceareas.heading}</h2>                         
+              <h2>{serviceareas.heading}</h2>              
             </div>            
             <div className="column is-offset-1 is-4">
               <ul>
@@ -201,14 +205,34 @@ export const CommercialHvacPageTemplate = ({
               <div className="bottom-cta-text"> 
                 <h2>{bottomcta.header}</h2>  
                 <p>{bottomcta.subheader} <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
-                <a href="http://www.fastechus.com/contact/" rel="noopener noreferrer" className="has-text-weight-bold btn secondary-btn">{bottomcta.cta}</a>              
+                <button className="has-text-weight-bold btn secondary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
               </div>
             </div>            
           </div>
       </div>
     </section>
+    <div className="ft-modal">      
+      <div className="container">                                   
+          <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }       
+          >
+            <div className="popup-form--container">
+              <div className={`close-button ${!isActive ? " " : "is-active"}` } onClick={() => setActive(!isActive)}>
+                <button>
+                  X
+                </button>
+              </div>
+              <div className="container">
+                  <div className="popup-form--content">                                    
+                    <HvacForm />
+                  </div>
+              </div>
+            </div>
+          </div>          
+      </div>
+    </div>      
   </div>
-)
+  )
+}
 
 CommercialHvacPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -283,7 +307,7 @@ const CommercialHvacPage = ({ data }) => {
               <meta name="description" content={`${frontmatter.metadescription}`} />       
             </Helmet>
           }  
-        />
+        />        
       </Layout>
     </div>
   )

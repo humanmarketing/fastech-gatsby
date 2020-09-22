@@ -65,7 +65,7 @@ industriesserved:
     - Hotels
     - Bakeries
 serviceareas:
-  heading: Service Areas
+  heading: Services
   items1:
     - HVAC/R maintenance
     - Coolers, freezers, walk-In's, reach-In's
