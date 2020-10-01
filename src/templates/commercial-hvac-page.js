@@ -102,7 +102,7 @@ export const CommercialHvacPageTemplate = ({
                   <IconText gridItems={leadingbusiness.blurbs} />
                 </div>              
                 <div className="has-text-centered">
-                  <button className="has-text-weight-bold btn secondary-btn" onClick={() => setActive(!isActive)}>
+                  <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                     Get Started 
                   </button>
                   <p style={{marginTop: '20px'}}>Or give us a call at <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
@@ -205,7 +205,7 @@ export const CommercialHvacPageTemplate = ({
               <div className="bottom-cta-text"> 
                 <h2>{bottomcta.header}</h2>  
                 <p>{bottomcta.subheader} <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
-                <button className="has-text-weight-bold btn secondary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
+                <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
               </div>
             </div>            
           </div>
@@ -369,7 +369,7 @@ export const commercialHvacPageQuery = graphql`
           text3
           image {
             childImageSharp {
-              fluid(maxWidth: 720, quality: 80) {
+              fluid(maxWidth: 608, quality: 64) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

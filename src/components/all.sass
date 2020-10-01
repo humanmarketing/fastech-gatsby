@@ -10,6 +10,7 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 $blue: #2C4B9E
+$green: #23A81D
 $darkblue: #2C395B
 $montserrat: 'Montserrat', sans-serif
 $raleway: 'Raleway', sans-serif
@@ -79,7 +80,7 @@ button
     max-width: 290px
 
 .primary-btn  
-  background-color: $blue
+  background-color: $green
   text-transform: uppercase
   letter-spacing: 1px
   &:hover
@@ -255,6 +256,8 @@ $menu-label-color: $white-ter
         align-items: center
     .pathogen-filtration-text
       padding: 2rem 0
+    .image-wrapper
+      max-width: 608px !important
   .industries
     background-color: $darkblue    
     h2
@@ -262,8 +265,8 @@ $menu-label-color: $white-ter
       font-size: 44px !important
     ul
       list-style: none
-      border-left: 1px solid #58668A
-      padding-left: 10px    
+      border-left: 1px solid $green
+      padding-left: 18px    
     .service-areas
       margin-top: 50px
       .column:nth-of-type(1)
@@ -274,7 +277,6 @@ $menu-label-color: $white-ter
   .bottom-cta
     &-text
       margin-top: 20px
-  
   footer
     padding-bottom: 2rem
     .container
@@ -310,11 +312,6 @@ $menu-label-color: $white-ter
           max-width: 280px
     .time-for-care
       background-position: -1px center
-  .pathogen-filtration
-    padding: 0 1rem
-    .column
-      padding-top: 0
-      padding-bottom: 6px
 +touch  
   .commercial-hvac-pg
     nav

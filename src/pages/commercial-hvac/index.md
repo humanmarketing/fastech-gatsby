@@ -47,7 +47,7 @@ pathogenfiltration:
   subheading3: Do I need to replace my entire HVAC system?
   text3: >
     No. GPS technology can be installed in most HVAC systems.
-  image: /img/hvac-airQuality-2x.jpg
+  image: /img/hvac-graph-npbi-data.png
 industriesserved:
   heading: Industries Served
   description: >
