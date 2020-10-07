@@ -6,6 +6,7 @@ import logo from '../img/ft-logo.png'
 import Layout from '../components/Layout'
 import HvacForm from '../components/HvacForm'
 import IconText from '../components/IconText'
+import PhoneNumber from '../components/PhoneNumber'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
@@ -39,9 +40,9 @@ export const CommercialHvacPageTemplate = ({
         </div>      
         <div className="navbar-end has-text-centered">
           <p><strong>24/7 SERVICE</strong></p>
-          <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">
-            800-788-8815
-          </a>
+          <div className="nav-tel">
+            <PhoneNumber number="800-788-8815" />          
+          </div>          
         </div>      
       </div>
     </nav> 
@@ -55,9 +56,9 @@ export const CommercialHvacPageTemplate = ({
                 <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                   {herocta}
                 </button>               
-                <div style={{marginTop:'10px'}}><a className="tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">
-                  800-788-8815 
-                </a></div>
+                <div style={{marginTop:'10px'}} className="tel">
+                  <PhoneNumber number="800-788-8815" />
+                </div>
                 <p>{description}</p> 
               </div>  
             </div>
@@ -105,7 +106,7 @@ export const CommercialHvacPageTemplate = ({
                   <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                     Get Started 
                   </button>
-                  <p style={{marginTop: '20px'}}>Or give us a call at <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
+                  <p style={{marginTop: '20px'}}>Or give us a call at <span className="nav-tel"><PhoneNumber number="800-788-8815" /></span></p>
                 </div>
               </div>                            
             </div>
@@ -204,7 +205,7 @@ export const CommercialHvacPageTemplate = ({
             <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
               <div className="bottom-cta-text"> 
                 <h2>{bottomcta.header}</h2>  
-                <p>{bottomcta.subheader} <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
+                <p>{bottomcta.subheader} <span className="nav-tel"><PhoneNumber number="800-788-8815" /></span></p>
                 <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
               </div>
             </div>            

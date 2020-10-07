@@ -284,7 +284,14 @@ $menu-label-color: $white-ter
       padding: 30px !important
     p
       color: #90A9B6
-
+  .telephone
+    &.not-active
+      opacity: 0
+    &.is-active
+      opacity: opacity .20s ease-in
+      -webkit-transition: opacity .20s ease-in
+      -moz-transition: opacity .20s ease-in
+        -o-transition: opacity .20s ease-in
 +tablet
   .commercial-hvac-pg  
     .hero
