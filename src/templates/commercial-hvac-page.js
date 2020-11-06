@@ -14,7 +14,7 @@ export const CommercialHvacPageTemplate = ({
   image,
   title,
   metadescription,
-  header, 
+  header,
   subheader,
   herocta,
   description,
@@ -23,9 +23,9 @@ export const CommercialHvacPageTemplate = ({
   pathogenfiltration,
   industriesserved,
   serviceareas,
-  bottomcta, 
+  bottomcta,
   helmet,
-}) => { 
+}) => {
   const [isActive, setActive] = useState(false);
   return (
   <div className="content">
@@ -37,15 +37,15 @@ export const CommercialHvacPageTemplate = ({
             <img src={logo} alt="Fastech" style={{ width: '200px' }} />
           </a>
           <p>Commercial HVAC and Refrigeration Services</p>
-        </div>      
+        </div>
         <div className="navbar-end has-text-centered">
           <p><strong>24/7 SERVICE</strong></p>
           <div className="nav-tel">
-            <PhoneNumber number="800-788-8815" />          
-          </div>          
-        </div>      
+            <PhoneNumber number="714-889-8851" />
+          </div>
+        </div>
       </div>
-    </nav> 
+    </nav>
     <div className="full-width-image-container margin-top-0 hero" style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }} >
        <section>
         <div className="container">
@@ -55,12 +55,12 @@ export const CommercialHvacPageTemplate = ({
                 <p><strong>{subheader}</strong></p>
                 <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                   {herocta}
-                </button>               
+                </button>
                 <div style={{marginTop:'10px'}} className="tel">
-                  <PhoneNumber number="800-788-8815" />
+                  <PhoneNumber number="714-889-8851" />
                 </div>
-                <p>{description}</p> 
-              </div>  
+                <p>{description}</p>
+              </div>
             </div>
         </div>
        </section>
@@ -73,17 +73,17 @@ export const CommercialHvacPageTemplate = ({
                     {main.heading}
                   </h3>
                 </div>
-                <div className="column is-offset-1 is-5">                  
+                <div className="column is-offset-1 is-5">
                   <p>{main.description}</p>
                   <ul>
-                    {main.items.map((item) => ( 
+                    {main.items.map((item) => (
                       <li key={item} className="is-size-6">
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
-            </div>   
+            </div>
         </div>
     </section>
     <section className="section section--gradient leading-business-wrapper">
@@ -92,23 +92,23 @@ export const CommercialHvacPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1 has-text-centered">
                 <div style={{maxWidth: '500px', margin: 'auto'}}>
-                  <h2>{leadingbusiness.header}</h2>                  
+                  <h2>{leadingbusiness.header}</h2>
                 </div>
             </div>
           </div>
           <div className="columns">
-            <div className="column is-10 is-offset-1">   
+            <div className="column is-10 is-offset-1">
               <div className="leading-business">
                 <div className="icon-text">
                   <IconText gridItems={leadingbusiness.blurbs} />
-                </div>              
+                </div>
                 <div className="has-text-centered">
                   <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
-                    Get Started 
+                    Get Started
                   </button>
-                  <p style={{marginTop: '20px'}}>Or give us a call at <span className="nav-tel"><PhoneNumber number="800-788-8815" /></span></p>
+                  <p style={{marginTop: '20px'}}>Or give us a call at <span className="nav-tel"><PhoneNumber number="714-889-8851" /></span></p>
                 </div>
-              </div>                            
+              </div>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ export const CommercialHvacPageTemplate = ({
                 <p>{pathogenfiltration.text1}</p>
                 <h3>{pathogenfiltration.subheading2}</h3>
                 <ul>
-                  {pathogenfiltration.items.map((item) => (  
+                  {pathogenfiltration.items.map((item) => (
                     <li key={item} className="is-size-6">
                       {item}
                     </li>
@@ -152,12 +152,12 @@ export const CommercialHvacPageTemplate = ({
           <div className="columns industries-served">
             <div className="column is-3">
               <h2>{industriesserved.heading}</h2>
-              <p>{industriesserved.description}</p>              
-            </div>            
-            <div className="column is-offset-1 is-4"> 
+              <p>{industriesserved.description}</p>
+            </div>
+            <div className="column is-offset-1 is-4">
               <ul>
                 {industriesserved.items1.map((item) => (
-                  <li key={item} className="is-size-5"> 
+                  <li key={item} className="is-size-5">
                     {item}
                   </li>
                 ))}
@@ -175,8 +175,8 @@ export const CommercialHvacPageTemplate = ({
           </div>
           <div className="columns service-areas">
             <div className="column is-3">
-              <h2>{serviceareas.heading}</h2>              
-            </div>            
+              <h2>{serviceareas.heading}</h2>
+            </div>
             <div className="column is-offset-1 is-4">
               <ul>
                 {serviceareas.items1.map((item) => (
@@ -203,18 +203,18 @@ export const CommercialHvacPageTemplate = ({
       <div className="container">
           <div className="columns">
             <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
-              <div className="bottom-cta-text"> 
-                <h2>{bottomcta.header}</h2>  
-                <p>{bottomcta.subheader} <span className="nav-tel"><PhoneNumber number="800-788-8815" /></span></p>
+              <div className="bottom-cta-text">
+                <h2>{bottomcta.header}</h2>
+                <p>{bottomcta.subheader} <span className="nav-tel"><PhoneNumber number="714-889-8851" /></span></p>
                 <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
               </div>
-            </div>            
+            </div>
           </div>
       </div>
     </section>
-    <div className="ft-modal">      
-      <div className="container">                                   
-          <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }       
+    <div className="ft-modal">
+      <div className="container">
+          <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }
           >
             <div className="popup-form--container">
               <div className={`close-button ${!isActive ? " " : "is-active"}` } onClick={() => setActive(!isActive)}>
@@ -223,14 +223,14 @@ export const CommercialHvacPageTemplate = ({
                 </button>
               </div>
               <div className="container">
-                  <div className="popup-form--content">                                    
+                  <div className="popup-form--content">
                     <HvacForm />
                   </div>
               </div>
             </div>
-          </div>          
+          </div>
       </div>
-    </div>      
+    </div>
   </div>
   )
 }
@@ -243,7 +243,7 @@ CommercialHvacPageTemplate.propTypes = {
   subheader: PropTypes.string,
   herocta: PropTypes.string,
   description: PropTypes.string,
-  leadingbusiness: PropTypes.shape({    
+  leadingbusiness: PropTypes.shape({
     header: PropTypes.string,
     blurbs: PropTypes.array,
   }),
@@ -286,7 +286,7 @@ const CommercialHvacPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <div className="commercial-hvac-pg"> 
+    <div className="commercial-hvac-pg">
       <Layout>
         <CommercialHvacPageTemplate
           image={frontmatter.image}
@@ -305,10 +305,10 @@ const CommercialHvacPage = ({ data }) => {
           helmet={
             <Helmet titleTemplate="%s | Fastech">
               <title>{`${frontmatter.title}`}</title>
-              <meta name="description" content={`${frontmatter.metadescription}`} />       
+              <meta name="description" content={`${frontmatter.metadescription}`} />
             </Helmet>
-          }  
-        />        
+          }
+        />
       </Layout>
     </div>
   )
@@ -353,7 +353,7 @@ export const commercialHvacPageQuery = graphql`
             }
             header
             text
-          }                    
+          }
         }
         main {
           heading
