@@ -15,8 +15,8 @@ export default () => (
         </div>      
         <div className="navbar-end has-text-centered">
             <p><strong>24/7 SERVICE</strong></p>
-            <a className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">
-            800-788-8815
+            <a className="nav-tel" href="tel:714-889-8851" target="_blank" rel="noopener noreferrer">
+            714-889-8851
             </a>
         </div>      
         </div>
@@ -28,7 +28,7 @@ export default () => (
                   <h1 className="has-text-weight-semibold is-size-3">
                   Thank you for your submission!
                   </h1>
-                  <p> We'll be in touch shortly. If you need immediate assistance, please call us at <a style={{color: 'white'}} className="nav-tel" href="tel:800-788-8815" target="_blank" rel="noopener noreferrer">800-788-8815</a></p>
+                  <p> We'll be in touch shortly. If you need immediate assistance, please call us at <a style={{color: 'white'}} className="nav-tel" href="tel:714-889-8851" target="_blank" rel="noopener noreferrer">714-889-8851</a></p>
                 </div>                
             </div>   
         </div>
