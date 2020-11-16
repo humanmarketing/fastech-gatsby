@@ -11,6 +11,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
 export const CommercialHvacPageTemplate = ({
+  test_AB,
   image,
   title,
   metadescription,
@@ -46,7 +47,10 @@ export const CommercialHvacPageTemplate = ({
         </div>
       </div>
     </nav>
-    <div className="full-width-image-container margin-top-0 hero" style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }} >
+    <div
+      className={`full-width-image-container margin-top-0 hero ${test_AB === 'B' ? 'hero--B' : ''}`}
+      style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }}
+    >
        <section>
         <div className="container">
             <div className="hero-textbox-wrapper">
@@ -217,11 +221,11 @@ export const CommercialHvacPageTemplate = ({
           <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }
           >
             <div className="popup-form--container">
-              <div className={`close-button ${!isActive ? " " : "is-active"}` } onClick={() => setActive(!isActive)}>
-                <button>
+              <button className={`close-button ${!isActive ? " " : "is-active"}` } onClick={() => setActive(!isActive)}>
+                <div>
                   X
-                </button>
-              </div>
+                </div>
+              </button>
               <div className="container">
                   <div className="popup-form--content">
                     <HvacForm />
@@ -236,6 +240,7 @@ export const CommercialHvacPageTemplate = ({
 }
 
 CommercialHvacPageTemplate.propTypes = {
+  test_AB: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   header: PropTypes.string,
@@ -289,6 +294,7 @@ const CommercialHvacPage = ({ data }) => {
     <div className="commercial-hvac-pg">
       <Layout>
         <CommercialHvacPageTemplate
+          test_AB={frontmatter.test_AB}
           image={frontmatter.image}
           title={frontmatter.title}
           metadescription={frontmatter.metadescription}
@@ -328,6 +334,7 @@ export const commercialHvacPageQuery = graphql`
   query CommercialHvacPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        test_AB
         title
         metadescription
         image {
