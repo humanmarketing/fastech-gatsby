@@ -11,8 +11,8 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <Helmet>
         <html lang="en" />
-        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet" as="style"/>
-        <link rel="preload" href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css" as="style" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;600;700&display=swap" as="style"/>
+        <link rel="preload" href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" type="text/css" as="style" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -47,10 +47,10 @@ const TemplateWrapper = ({ children }) => {
         <meta
           property="og:image"
           content={`${withPrefix('/')}img/ft-logo.png`}
-        /> 
+        />
       </Helmet>
       <div>{children}</div>
-      <Footer />      
+      <Footer />
     </div>
   )
 }
