@@ -118,40 +118,42 @@ export const CommercialHvacPageTemplate = ({
         </div>
       </div>
     </section>
-    <section className="section section--gradient pathogen-filtration">
-      <div className="container">
-          <div className="columns">
-            <div className="column is-6">
-              <div className="pathogen-filtration-text">
-                <h2>{pathogenfiltration.heading}</h2>
-                <h3>{pathogenfiltration.subheading1}</h3>
-                <p>{pathogenfiltration.text1}</p>
-                <h3>{pathogenfiltration.subheading2}</h3>
-                <ul>
-                  {pathogenfiltration.items.map((item) => (
-                    <li key={item} className="is-size-6">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <h3>{pathogenfiltration.subheading3}</h3>
-                <p>{pathogenfiltration.text3}</p>
+    {pathogenfiltration && (
+      <section className="section section--gradient pathogen-filtration">
+        <div className="container">
+            <div className="columns">
+              <div className="column is-6">
+                <div className="pathogen-filtration-text">
+                  <h2>{pathogenfiltration.heading}</h2>
+                  <h3>{pathogenfiltration.subheading1}</h3>
+                  <p>{pathogenfiltration.text1}</p>
+                  <h3>{pathogenfiltration.subheading2}</h3>
+                  <ul>
+                    {pathogenfiltration.items.map((item) => (
+                      <li key={item} className="is-size-6">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <h3>{pathogenfiltration.subheading3}</h3>
+                  <p>{pathogenfiltration.text3}</p>
+                </div>
+              </div>
+              <div className="column is-6">
+                  <div className="image-wrapper"
+                    style={{
+                      width: '100%',
+                      display: 'inline-block',
+                    }}
+                  >
+                    <PreviewCompatibleImage imageInfo={pathogenfiltration.image} />
+                  </div>
               </div>
             </div>
-            <div className="column is-6">
-                <div className="image-wrapper"
-                  style={{
-                    width: '100%',
-                    display: 'inline-block',
-                  }}
-                >
-                  <PreviewCompatibleImage imageInfo={pathogenfiltration.image} />
-                </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    <section className="section section--gradient  has-text-white-ter industries">
+        </div>
+      </section>
+    )}
+    <section className="section section--gradient has-text-white-ter industries">
       <div className="container">
           <div className="columns industries-served">
             <div className="column is-3">
@@ -218,13 +220,10 @@ export const CommercialHvacPageTemplate = ({
     </section>
     <div className="ft-modal">
       <div className="container">
-          <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }
-          >
+          <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }>
             <div className="popup-form--container">
               <button className={`close-button ${!isActive ? " " : "is-active"}` } onClick={() => setActive(!isActive)}>
-                <div>
-                  X
-                </div>
+                <div>X</div>
               </button>
               <div className="container">
                   <div className="popup-form--content">
@@ -294,20 +293,7 @@ const CommercialHvacPage = ({ data }) => {
     <div className="commercial-hvac-pg">
       <Layout>
         <CommercialHvacPageTemplate
-          test_AB={frontmatter.test_AB}
-          image={frontmatter.image}
-          title={frontmatter.title}
-          metadescription={frontmatter.metadescription}
-          header={frontmatter.header}
-          subheader={frontmatter.subheader}
-          herocta={frontmatter.herocta}
-          description={frontmatter.description}
-          leadingbusiness={frontmatter.leadingbusiness}
-          main={frontmatter.main}
-          pathogenfiltration={frontmatter.pathogenfiltration}
-          industriesserved={frontmatter.industriesserved}
-          serviceareas={frontmatter.serviceareas}
-          bottomcta={frontmatter.bottomcta}
+          {...frontmatter}
           helmet={
             <Helmet titleTemplate="%s | Fastech">
               <title>{`${frontmatter.title}`}</title>

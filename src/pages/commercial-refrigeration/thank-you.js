@@ -11,16 +11,16 @@ export default () => (
             <a href="http://www.fastechus.com/" className="navbar-item nav-logo" title="Logo">
             <img src={logo} alt="Fastech" style={{ width: '200px' }} />
             </a>
-            <p>Commercial HVAC and Refrigeration Services</p>
-        </div>      
+            <p>Commercial Refrigeration Services</p>
+        </div>
         <div className="navbar-end has-text-centered">
             <p><strong>24/7 SERVICE</strong></p>
             <a className="nav-tel" href="tel:714-889-8851" target="_blank" rel="noopener noreferrer">
             714-889-8851
             </a>
-        </div>      
         </div>
-    </nav> 
+        </div>
+    </nav>
     <section className="section section--gradient">
         <div className="container">
             <div className="columns">
@@ -29,10 +29,10 @@ export default () => (
                   Thank you for your submission!
                   </h1>
                   <p> We'll be in touch shortly. If you need immediate assistance, please call us at <a style={{color: 'white'}} className="nav-tel" href="tel:714-889-8851" target="_blank" rel="noopener noreferrer">714-889-8851</a></p>
-                </div>                
-            </div>   
+                </div>
+            </div>
         </div>
-    </section>    
+    </section>
     </div>
   </Layout>
 )
