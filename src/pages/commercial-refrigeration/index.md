@@ -15,7 +15,7 @@ leadingbusiness:
     - image: /img/icon-cutting-edge-2x.png
       header: Cutting-Edge Technology
       text: >
-        Save on utilities and get the cleanest air possible. It’s a win-win for your organization, employee health and the environment.
+        Save on utilities and get the highest performance possible. It’s a win-win for your organization, employee health and the environment.
     - image: /img/icon-experien-2x.png
       header: Unrivaled Experience
       text: >
@@ -29,7 +29,6 @@ main:
   description: >
     Stop taking shortcuts when it comes to your commercial refrigeration system. With the right commercial refrigeration service provider, you’ll not only save on utility costs, but you’ll have a reliable, high-performing refrigeration and cooling system that will last you for years to come.
   items:
-    - Anti-COVID ionizing & air purification technology
     - Responsive, experienced crews available 24/7
     - Reduce utility costs and minimize downtime
     - Full installation, maintenance and upgrade services
