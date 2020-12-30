@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import logo from '../img/ft-logo.png'
@@ -12,14 +11,12 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 export const CommercialHvacPageTemplate = ({
   test_AB,
   image,
-  title,
-  metadescription,
   header,
   subheader,
   herocta,
   description,
-  leadingbusiness,
   main,
+  leadingbusiness,
   pathogenfiltration,
   industriesserved,
   serviceareas,
@@ -72,15 +69,13 @@ export const CommercialHvacPageTemplate = ({
         <div className="container">
             <div className="columns">
                 <div className="column is-offset-1 is-5" style={{display: 'flex', alignItems: 'center',}}>
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
+                  <h3>{main.heading}</h3>
                 </div>
                 <div className="column is-offset-1 is-5">
                   <p>{main.description}</p>
                   <ul>
                     {main.items.map((item) => (
-                      <li key={item} className="is-size-6">
+                      <li key={item} className="has-text-weight-bold is-size-6">
                         {item}
                       </li>
                     ))}
@@ -125,7 +120,7 @@ export const CommercialHvacPageTemplate = ({
                 <div className="pathogen-filtration-text">
                   <h2>{pathogenfiltration.heading}</h2>
                   <h3>{pathogenfiltration.subheading1}</h3>
-                  <p>{pathogenfiltration.text1}</p>
+                  <p dangerouslySetInnerHTML={{ __html: pathogenfiltration.text1 }}></p>
                   <h3>{pathogenfiltration.subheading2}</h3>
                   <ul>
                     {pathogenfiltration.items.map((item) => (
@@ -149,6 +144,13 @@ export const CommercialHvacPageTemplate = ({
                   </div>
               </div>
             </div>
+            {pathogenfiltration.cta_label && (
+              <div className="columns">
+                <div className="column is-12">
+                  <h2>{pathogenfiltration.cta_label}</h2>
+                </div>
+              </div>
+            )}
         </div>
       </section>
     )}
@@ -210,7 +212,6 @@ export const CommercialHvacPageTemplate = ({
             <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
               <div className="bottom-cta-text">
                 <h2>{bottomcta.header}</h2>
-                <p>{bottomcta.subheader} <span className="nav-tel"><PhoneNumber number="714-889-8851" /></span></p>
                 <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
               </div>
             </div>
@@ -237,54 +238,6 @@ export const CommercialHvacPageTemplate = ({
   )
 }
 
-CommercialHvacPageTemplate.propTypes = {
-  test_AB: PropTypes.string,
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  header: PropTypes.string,
-  metadescription: PropTypes.string,
-  subheader: PropTypes.string,
-  herocta: PropTypes.string,
-  description: PropTypes.string,
-  leadingbusiness: PropTypes.shape({
-    header: PropTypes.string,
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    items: PropTypes.array,
-  }),
-  pathogenfiltration: PropTypes.shape({
-    heading: PropTypes.string,
-    subheading1: PropTypes.string,
-    text1: PropTypes.string,
-    subheading2: PropTypes.string,
-    items: PropTypes.array,
-    subheading3: PropTypes.string,
-    text3: PropTypes.string,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }),
-  industriesserved: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    items1: PropTypes.array,
-    items2: PropTypes.array,
-  }),
-  serviceareas: PropTypes.shape({
-    heading: PropTypes.string,
-    items1: PropTypes.array,
-    items2: PropTypes.array,
-  }),
-  bottomcta: PropTypes.shape({
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    header: PropTypes.string,
-    subheader: PropTypes.string,
-    herocta: PropTypes.string,
-  }),
-  helmet: PropTypes.object,
-}
-
 const CommercialHvacPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
@@ -303,14 +256,6 @@ const CommercialHvacPage = ({ data }) => {
       </Layout>
     </div>
   )
-}
-
-CommercialHvacPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
 }
 
 export default CommercialHvacPage
@@ -333,6 +278,11 @@ export const commercialHvacPageQuery = graphql`
         subheader
         herocta
         description
+        main {
+          heading
+          description
+          items
+        }
         leadingbusiness {
           header
           blurbs {
@@ -346,11 +296,6 @@ export const commercialHvacPageQuery = graphql`
             header
             text
           }
-        }
-        main {
-          heading
-          description
-          items
         }
         pathogenfiltration {
           heading
@@ -367,6 +312,7 @@ export const commercialHvacPageQuery = graphql`
               }
             }
           }
+          cta_label
         }
         industriesserved {
           heading
