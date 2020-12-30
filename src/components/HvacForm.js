@@ -1,11 +1,13 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
+// import { navigate } from 'gatsby-link'
 
-function encode(data) {
-    return Object.keys(data)
-        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
-}
+// function encode(data) {
+//     return Object.keys(data)
+//         .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//         .join('&')
+// }
+
+/* eslint-disable */
 
 export default class HvacForm extends React.Component {
     constructor(props) {
@@ -16,7 +18,6 @@ export default class HvacForm extends React.Component {
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
-
 
     render() {
     return (

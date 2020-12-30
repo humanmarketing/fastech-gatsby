@@ -9,7 +9,6 @@ import IconText from '../components/IconText'
 import PhoneNumber from '../components/PhoneNumber'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-
 export const CommercialHvacPageTemplate = ({
   test_AB,
   image,
