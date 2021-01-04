@@ -7,7 +7,7 @@ header: Commercial HVAC and Refrigeration Services
 subheader: 24/7, Expert Service Where & When You Need It
 herocta: Contact Now
 description: Call Now For Immediate Service
-image: /img/hvac-hero-2-2x.jpg
+hero_image: /img/hvac-hero-2-2x.jpg
 leadingbusiness:
   header: Leading Businesses Choose FASTECH HVAC & Refrigeration
   blurbs:
@@ -22,7 +22,7 @@ leadingbusiness:
     - image: /img/icon-service-2x.png
       header: Interruption-Free Service
       text: >
-        No price gouging or unnecessary upgrades. Just high-quality, expert service that keeps your HVAC or refrigeration system running smoothly with minimal interruption.  
+        No price gouging or unnecessary upgrades. Just high-quality, expert service that keeps your HVAC or refrigeration system running smoothly with minimal interruption.
 main:
   heading: It's time to take care of your cooling and refrigeration service
   description: >
@@ -76,7 +76,7 @@ serviceareas:
 bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your HVAC or Refrigeration Services?
-  subheader: > 
+  subheader: >
     Give our expert team a call today at
   cta: Contact Us Now
 ---

@@ -4,20 +4,23 @@ import logo from '../img/ft-logo.png'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer">        
+      <footer className="footer">
         <div className="content">
           <div className="container">
             <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
+              <div className="column is-3">
                 <section className="menu">
-                <img src={logo} alt="Fastech" style={{ width: '200px' }} />  
+                <img src={logo} alt="Fastech" style={{ width: '200px' }} />
                 </section>
               </div>
-              <div className="column is-8">
+              <div className="column is-9">
                 <section>
-                  <p>Founded in 1998 in Buena Park, CA, FASTECH has helped thousands of clients over their 20+ year history. From design and permitting to new construction, facility maintenance, compliance testing and system upgrades, FASTECH has built a nationally recognized and trusted industry reputation for responsive, experienced service and cutting edge technology.</p>
+                  <p>
+                    Founded in 1988 in Buena Park CA, FASTECH has served thousands of businesses.
+                    From permits, heavy construction and facility maintenance to compliance testing and system upgrades, FASTECH has built a nationally recognized reputation for responsive, experienced service and cutting-edge technology.
+                  </p>
                 </section>
-              </div>              
+              </div>
             </div>
           </div>
         </div>

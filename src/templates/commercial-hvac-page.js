@@ -10,7 +10,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const CommercialHvacPageTemplate = ({
   test_AB,
-  image,
+  hero_image,
   header,
   subheader,
   herocta,
@@ -45,14 +45,17 @@ export const CommercialHvacPageTemplate = ({
     </nav>
     <div
       className={`full-width-image-container margin-top-0 hero ${test_AB === 'B' ? 'hero--B' : ''}`}
-      style={{ backgroundImage: `url(${ !!image.childImageSharp ? image.childImageSharp.fluid.src : image })`, }}
+      style={{ 'background-image': `url(${ !!hero_image.childImageSharp
+        ? hero_image.childImageSharp.fluid.src
+        : hero_image
+      })` }}
     >
        <section>
         <div className="container">
             <div className="hero-textbox-wrapper">
               <div className="hero-textbox">
                 <h1 className="has-text-weight-semibold is-size-3">{header}</h1>
-                <p><strong>{subheader}</strong></p>
+                <p>{subheader}</p>
                 <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                   {herocta}
                 </button>
@@ -89,9 +92,7 @@ export const CommercialHvacPageTemplate = ({
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1 has-text-centered">
-                <div style={{maxWidth: '500px', margin: 'auto'}}>
-                  <h2>{leadingbusiness.header}</h2>
-                </div>
+              <h2>{leadingbusiness.header}</h2>
             </div>
           </div>
           <div className="columns">
@@ -104,7 +105,6 @@ export const CommercialHvacPageTemplate = ({
                   <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>
                     Get Started
                   </button>
-                  <p style={{marginTop: '20px'}}>Or give us a call at <span className="nav-tel"><PhoneNumber number="714-889-8851" /></span></p>
                 </div>
               </div>
             </div>
@@ -116,21 +116,27 @@ export const CommercialHvacPageTemplate = ({
       <section className="section section--gradient pathogen-filtration">
         <div className="container">
             <div className="columns">
+              <div className="column is-4 has-text-centered" style={{ margin: '0 auto' }}>
+                <h2>{pathogenfiltration.heading}</h2>
+              </div>
+            </div>
+            <div className="columns">
               <div className="column is-6">
                 <div className="pathogen-filtration-text">
-                  <h2>{pathogenfiltration.heading}</h2>
-                  <h3>{pathogenfiltration.subheading1}</h3>
-                  <p dangerouslySetInnerHTML={{ __html: pathogenfiltration.text1 }}></p>
-                  <h3>{pathogenfiltration.subheading2}</h3>
-                  <ul>
-                    {pathogenfiltration.items.map((item) => (
-                      <li key={item} className="is-size-6">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <h3>{pathogenfiltration.subheading3}</h3>
-                  <p>{pathogenfiltration.text3}</p>
+                  <div>
+                    <h3>{pathogenfiltration.subheading1}</h3>
+                    <p dangerouslySetInnerHTML={{ __html: pathogenfiltration.text1 }}></p>
+                    <h3>{pathogenfiltration.subheading2}</h3>
+                    <ul>
+                      {pathogenfiltration.items.map((item) => (
+                        <li key={item} className="is-size-6 has-text-weight-bold">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <h3>{pathogenfiltration.subheading3}</h3>
+                    <p>{pathogenfiltration.text3}</p>
+                  </div>
                 </div>
               </div>
               <div className="column is-6">
@@ -145,9 +151,14 @@ export const CommercialHvacPageTemplate = ({
               </div>
             </div>
             {pathogenfiltration.cta_label && (
-              <div className="columns">
-                <div className="column is-12">
-                  <h2>{pathogenfiltration.cta_label}</h2>
+              <div className="columns pathogen-filtration-cta">
+                <div className="column is-8" style={{ margin: '0 auto', justifyContent: 'center' }}>
+                  <div className="has-text-centered">
+                    <h2>{pathogenfiltration.cta_label}</h2>
+                    <div className="tel has-text-weight-bold">
+                      <PhoneNumber number="714-889-8851" />
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -164,18 +175,14 @@ export const CommercialHvacPageTemplate = ({
             <div className="column is-offset-1 is-4">
               <ul>
                 {industriesserved.items1.map((item) => (
-                  <li key={item} className="is-size-5">
-                    {item}
-                  </li>
+                  <li key={item} className="is-size-5">{item}</li>
                 ))}
               </ul>
             </div>
             <div className="column is-4">
               <ul>
                 {industriesserved.items2.map((item) => (
-                  <li key={item} className="is-size-5">
-                    {item}
-                  </li>
+                  <li key={item} className="is-size-5">{item}</li>
                 ))}
               </ul>
             </div>
@@ -187,18 +194,14 @@ export const CommercialHvacPageTemplate = ({
             <div className="column is-offset-1 is-4">
               <ul>
                 {serviceareas.items1.map((item) => (
-                  <li key={item} className="is-size-5">
-                    {item}
-                  </li>
+                  <li key={item} className="is-size-5">{item}</li>
                 ))}
               </ul>
             </div>
             <div className="column is-4">
               <ul>
                 {serviceareas.items2.map((item) => (
-                  <li key={item} className="is-size-5">
-                    {item}
-                  </li>
+                  <li key={item} className="is-size-5">{item}</li>
                 ))}
               </ul>
             </div>
@@ -267,7 +270,7 @@ export const commercialHvacPageQuery = graphql`
         test_AB
         title
         metadescription
-        image {
+        hero_image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 80) {
               ...GatsbyImageSharpFluid

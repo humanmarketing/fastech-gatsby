@@ -8,10 +8,10 @@ header: Commercial HVAC Services
 subheader: 24/7, Expert Service Where & When You Need It
 herocta: Contact Now
 description: Call Now For Immediate Service
-image: /img/hvac-hero-2-2x.jpg
+hero_image: /img/ft-115-hero-desktop-2x.jpg
 main:
   heading: It’s time to take care of your commercial HVAC system
-  description: >
+  description: >-
     Stop taking shortcuts when it comes to your commercial HVAC system. With the right commercial HVAC service provider, you’ll not only save on utility costs, but you’ll have a reliable, high-performing heating, cooling and air system that will last you for years to come.
   items:
     - Anti-COVID ionizing & air purification technology
@@ -25,20 +25,20 @@ leadingbusiness:
   blurbs:
     - image: /img/icon-cutting-edge-2x.png
       header: Cutting-Edge Technology
-      text: >
+      text: >-
         Save on utilities and get the cleanest air possible. It’s a win-win for your organization, employee health and the environment.
     - image: /img/icon-experien-2x.png
       header: Unrivaled Experience
-      text: >
+      text: >-
         Our team has decades of experience servicing massive enterprises to local businesses. You’ll have a partner you can always rely on.
     - image: /img/icon-service-2x.png
       header: Interruption-Free Service
-      text: >
+      text: >-
         No price gouging or unnecessary upgrades. Just high-quality, expert service that keeps your commercial AC system running smoothly with minimal interruption.
 pathogenfiltration:
   heading: Improve Indoor Air Quality With Pathogen Filtration
   subheading1: What is NPBI?
-  text1: >
+  text1: >-
     Needlepoint bipolar ionization (NPBI) technology purifies indoor air, by eliminating airborne particles, pathogens and odors, including COVID-19. <strong>An independent lab test showed GPS air technology had a 90% rate of reduction of coronavirus particles.</strong>
   subheading2: What are the benefits?
   items:
@@ -47,13 +47,13 @@ pathogenfiltration:
     - Lowers carbon footprint
     - Produces zero ozone or harmful byproducts
   subheading3: Do I need to replace my entire HVAC system?
-  text3: >
+  text3: >-
     No. GPS technology can be installed in most HVAC systems.
   image: /img/hvac-graph-npbi-data.png
   cta_label: Curious? Give us a call to learn more.
 industriesserved:
   heading: Industries Served
-  description: >
+  description: >-
     Our expert team has provided commercial HVAC services for thousands of clients across nearly every industry, including:
   items1:
     - Convenience Stores

@@ -8,7 +8,7 @@ header: Commercial Refrigeration Services
 subheader: 24/7, Expert Service Where & When You Need It
 herocta: Contact Now
 description: Call Now For Immediate Service
-image: /img/hvac-hero-1-2x.jpg
+hero_image: /img/hvac-hero-1-2x.jpg
 leadingbusiness:
   header: WHY FASTECH Commercial Refrigeration Services?
   blurbs:
