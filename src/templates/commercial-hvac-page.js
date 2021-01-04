@@ -9,6 +9,7 @@ import PhoneNumber from '../components/PhoneNumber'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const CommercialHvacPageTemplate = ({
+  title,
   test_AB,
   hero_image,
   header,
@@ -33,7 +34,7 @@ export const CommercialHvacPageTemplate = ({
           <a href="http://www.fastechus.com/" className="navbar-item nav-logo" title="Logo">
             <img src={logo} alt="Fastech" style={{ width: '200px' }} />
           </a>
-          <p>Commercial HVAC and Refrigeration Services</p>
+          <p>{title}</p>
         </div>
         <div className="navbar-end has-text-centered">
           <p><strong>24/7 SERVICE</strong></p>
