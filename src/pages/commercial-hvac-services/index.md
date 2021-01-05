@@ -77,6 +77,6 @@ serviceareas:
     - HVAC Ductwork
 bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
-  header: Ready to Upgrade Your HVAC or Refrigeration Services?
+  header: Ready to Upgrade Your Commercial HVAC Services?
   cta: Contact Us Today
 ---

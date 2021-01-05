@@ -33,7 +33,7 @@ leadingbusiness:
     - image: /img/icon-service-2x.png
       header: Interruption-Free Service
       text: >-
-        No price gouging or unnecessary upgrades. Just high-quality, expert service that keeps your commercial AC system running smoothly with minimal interruption.
+        No price gouging or unnecessary upgrades. Just high-quality, expert service that keeps your commercial cooling system running smoothly with minimal interruption.
 pathogenfiltration:
   heading: Improve Indoor Air Quality With Pathogen Filtration
   subheading1: What is NPBI?
