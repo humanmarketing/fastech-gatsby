@@ -62,16 +62,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-csp',
       options: {
+        mergeDefault: true,
         directives: {
-          'script-src': "https://www.google-analytics.com 'unsafe-inline';",
-          'style-src':  "'unsafe-inline'; ",
-          'img-src':    "https://www.google-analytics.com",
-
-          'script-src': "https://optimize.google.com 'unsafe-inline';",
-          'style-src':  "https://optimize.google.com https://fonts.googleapis.com 'unsafe-inline';",
-          'img-src':    "https://optimize.google.com;",
-          'font-src':   "https://fonts.gstatic.com;",
-          'frame-src':  "https://optimize.google.com",
+          'script-src': "'self' https://www.google-analytics.com https://optimize.google.com 'unsafe-inline';",
+          'style-src':  "'self' https://optimize.google.com https://fonts.googleapis.com 'unsafe-inline';",
+          'img-src':    "'self' https://www.google-analytics.com https://optimize.google.com",
+          'font-src':   "'self' https://fonts.gstatic.com;",
+          'frame-src':  "'self' https://optimize.google.com;",
         }
       }
     },
