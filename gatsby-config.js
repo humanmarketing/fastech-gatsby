@@ -59,19 +59,19 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-csp',
-      options: {
-        mergeDefault: true,
-        directives: {
-          'script-src': "'self' https://www.google-analytics.com https://optimize.google.com 'unsafe-inline';",
-          'style-src':  "'self' https://optimize.google.com https://fonts.googleapis.com 'unsafe-inline';",
-          'img-src':    "'self' https://www.google-analytics.com https://optimize.google.com",
-          'font-src':   "'self' https://fonts.gstatic.com;",
-          'frame-src':  "'self' https://optimize.google.com;",
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-csp',
+    //   options: {
+    //     mergeDefault: true,
+    //     directives: {
+    //       'script-src': "'self' https://www.google-analytics.com https://optimize.google.com 'unsafe-inline';",
+    //       'style-src':  "'self' https://optimize.google.com https://fonts.googleapis.com 'unsafe-inline';",
+    //       'img-src':    "'self' https://www.google-analytics.com https://optimize.google.com",
+    //       'font-src':   "'self' https://fonts.gstatic.com;",
+    //       'frame-src':  "'self' https://optimize.google.com;",
+    //     }
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {

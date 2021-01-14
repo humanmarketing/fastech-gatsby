@@ -34,6 +34,8 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
 
       <Footer />
+
+      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5CG6B36"></script>
     </div>
   )
 }
