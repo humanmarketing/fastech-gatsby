@@ -24,7 +24,8 @@ export const CommercialHvacPageTemplate = ({
   helmet,
 }) => {
   const [isActive, setActive] = useState(false);
-  return (
+
+  return <>
   <div className="content">
     {helmet || ''}
     <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
@@ -238,7 +239,11 @@ export const CommercialHvacPageTemplate = ({
       </div>
     </div>
   </div>
-  )
+
+  {/* <!-- Start of HubSpot Embed Code --> */}
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9180180.js"></script>
+  {/* <!-- End of HubSpot Embed Code --> */}
+  </>
 }
 
 const CommercialHvacPage = ({ data }) => {
