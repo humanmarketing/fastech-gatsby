@@ -436,25 +436,48 @@ $menu-label-color: $white-ter
   margin: auto
   .mc-field-group
     label
+      font-weight: bold
       font-family: $montserrat
-    input
+      text-transform: uppercase
+      small
+        font-weight: normal
+        text-transform: initial
+    input, select
+      -webkit-appearance: none
+      appearance: none
       padding: 10px 0
-      font-size: 16px
-      font-family: $montserrat
-    select
-      border: 1px solid #ABB0B2
+      border: 0
       border-radius: 3px
-      padding: 10px 0
+      background-color: #eaf0fe
       font-size: 16px
       font-family: $montserrat
+      &:focus
+        outline: 0
+        box-shadow: 0 0 0 2px rgba($green, 0.6)
     textarea
       font-size: 16px
       font-family: $montserrat
     +mobile
       width: 96% !important
+  .select-with-arrow
+    position: relative
+    &::after
+      content: '';
+      position: absolute
+      right: 0.5em
+      top: 50%
+      transform: translate(-50%, -100%) rotate(-45deg)
+      display: inline-block
+      width: 0.7em
+      height: 0.7em
+      border-left: 2px solid $darkblue
+      border-bottom: 2px solid $darkblue
   .submit-btn
+    -webkit-appearance: none
+    appearance: none
     cursor: pointer
-    background-color: $blue
+    border: 0
+    background-color: $green
     text-transform: uppercase
     font-weight: bold
     font-family: $montserrat
@@ -474,39 +497,49 @@ $menu-label-color: $white-ter
     right: 0.5rem
     background: none
     border: 0
+    color: #fff
     > div
-      font-size: 16px
+      font-size: 18px
       font-weight: bold
   .pop-up-cta
     display: inline-block
-  .popup-form
-    &--wrapper
-      background: rgba(0,0,0,0.8)
+  .popup-form--wrapper
+    background: rgba(0,0,0,0.8)
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1000
+    &:not(.is-active)
       display: none
-      width: 100%
-      height: 100%
-      position: fixed
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      z-index: 1000
-      &.is-active
-        display: block
-      .popup-form--container
-        position: absolute
-        width: 600px
-        max-width: 90%
-        height: auto
-        min-height: 300px
-        max-height: 90vh
-        margin: 4rem auto 0
-        padding: 2rem
-        left: 0
-        right: 0
-        z-index: 1001
-        background: #fff
-        text-align: center
-        overflow: scroll
-        +mobile
-          margin: 2rem auto 2rem
+  .popup-form--container
+    position: absolute
+    width: 600px
+    max-width: 90%
+    height: auto
+    min-height: 300px
+    max-height: 90vh
+    margin: 4rem auto 0
+    left: 0
+    right: 0
+    z-index: 1001
+    border-radius: 10px
+    background: #fff
+    text-align: center
+    overflow: auto
+    +mobile
+      margin: 2rem auto 2rem
+    .container
+      padding: 2rem
+      +mobile
+        padding: 1rem
+  .popup-form--header
+    padding: 1rem
+    background-color: $darkblue
+    color: #fff
+    font-size: 18px
+    font-weight: bold
+    font-family: $montserrat

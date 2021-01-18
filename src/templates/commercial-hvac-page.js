@@ -9,6 +9,7 @@ import PhoneNumber from '../components/PhoneNumber'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const CommercialHvacPageTemplate = ({
+  title,
   test_AB,
   hero_image,
   header,
@@ -46,12 +47,12 @@ export const CommercialHvacPageTemplate = ({
     </nav>
     <div
       className={`full-width-image-container margin-top-0 hero ${test_AB === 'B' ? 'hero--B' : ''}`}
-      style={{ 'background-image': `url(${ !!hero_image.childImageSharp
+      style={{ backgroundImage: `url(${ !!hero_image.childImageSharp
         ? hero_image.childImageSharp.fluid.src
         : hero_image
       })` }}
     >
-       <section>
+      <section>
         <div className="container">
             <div className="hero-textbox-wrapper">
               <div className="hero-textbox">
@@ -67,26 +68,24 @@ export const CommercialHvacPageTemplate = ({
               </div>
             </div>
         </div>
-       </section>
+      </section>
     </div>
     <section className="section section--gradient has-text-white-ter time-for-care">
-        <div className="container">
-            <div className="columns">
-                <div className="column is-offset-1 is-5" style={{display: 'flex', alignItems: 'center',}}>
-                  <h3>{main.heading}</h3>
-                </div>
-                <div className="column is-offset-1 is-5">
-                  <p>{main.description}</p>
-                  <ul>
-                    {main.items.map((item) => (
-                      <li key={item} className="has-text-weight-bold is-size-6">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-            </div>
+      <div className="container">
+        <div className="columns">
+          <div className="column is-offset-1 is-5" style={{display: 'flex', alignItems: 'center',}}>
+            <h3>{main.heading}</h3>
+          </div>
+          <div className="column is-offset-1 is-5">
+            <p>{main.description}</p>
+            <ul>
+              {main.items.map((item) => (
+                <li key={item} className="has-text-weight-bold is-size-6">{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
     <section className="section section--gradient leading-business-wrapper">
       <div className="container">
@@ -116,126 +115,127 @@ export const CommercialHvacPageTemplate = ({
     {pathogenfiltration && (
       <section className="section section--gradient pathogen-filtration">
         <div className="container">
-            <div className="columns">
-              <div className="column is-4 has-text-centered" style={{ margin: '0 auto' }}>
-                <h2>{pathogenfiltration.heading}</h2>
+          <div className="columns">
+            <div className="column is-4 has-text-centered" style={{ margin: '0 auto' }}>
+              <h2>{pathogenfiltration.heading}</h2>
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column is-6">
+              <div className="pathogen-filtration-text">
+                <div>
+                  <h3>{pathogenfiltration.subheading1}</h3>
+                  <p dangerouslySetInnerHTML={{ __html: pathogenfiltration.text1 }}></p>
+                  <h3>{pathogenfiltration.subheading2}</h3>
+                  <ul>
+                    {pathogenfiltration.items.map((item) => (
+                      <li key={item} className="is-size-6 has-text-weight-bold">{item}</li>
+                    ))}
+                  </ul>
+                  <h3>{pathogenfiltration.subheading3}</h3>
+                  <p>{pathogenfiltration.text3}</p>
+                </div>
               </div>
             </div>
-            <div className="columns">
-              <div className="column is-6">
-                <div className="pathogen-filtration-text">
-                  <div>
-                    <h3>{pathogenfiltration.subheading1}</h3>
-                    <p dangerouslySetInnerHTML={{ __html: pathogenfiltration.text1 }}></p>
-                    <h3>{pathogenfiltration.subheading2}</h3>
-                    <ul>
-                      {pathogenfiltration.items.map((item) => (
-                        <li key={item} className="is-size-6 has-text-weight-bold">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <h3>{pathogenfiltration.subheading3}</h3>
-                    <p>{pathogenfiltration.text3}</p>
+            <div className="column is-6">
+                <div className="image-wrapper"
+                  style={{
+                    width: '100%',
+                    display: 'inline-block',
+                  }}
+                >
+                  <PreviewCompatibleImage imageInfo={pathogenfiltration.image} />
+                </div>
+            </div>
+          </div>
+          {pathogenfiltration.cta_label && (
+            <div className="columns pathogen-filtration-cta">
+              <div className="column is-8" style={{ margin: '0 auto', justifyContent: 'center' }}>
+                <div className="has-text-centered">
+                  <h2>{pathogenfiltration.cta_label}</h2>
+                  <div className="tel has-text-weight-bold">
+                    <PhoneNumber number="714-889-8851" />
                   </div>
                 </div>
               </div>
-              <div className="column is-6">
-                  <div className="image-wrapper"
-                    style={{
-                      width: '100%',
-                      display: 'inline-block',
-                    }}
-                  >
-                    <PreviewCompatibleImage imageInfo={pathogenfiltration.image} />
-                  </div>
-              </div>
             </div>
-            {pathogenfiltration.cta_label && (
-              <div className="columns pathogen-filtration-cta">
-                <div className="column is-8" style={{ margin: '0 auto', justifyContent: 'center' }}>
-                  <div className="has-text-centered">
-                    <h2>{pathogenfiltration.cta_label}</h2>
-                    <div className="tel has-text-weight-bold">
-                      <PhoneNumber number="714-889-8851" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+          )}
         </div>
       </section>
     )}
     <section className="section section--gradient has-text-white-ter industries">
       <div className="container">
-          <div className="columns industries-served">
-            <div className="column is-3">
-              <h2>{industriesserved.heading}</h2>
-              <p>{industriesserved.description}</p>
-            </div>
-            <div className="column is-offset-1 is-4">
-              <ul>
-                {industriesserved.items1.map((item) => (
-                  <li key={item} className="is-size-5">{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="column is-4">
-              <ul>
-                {industriesserved.items2.map((item) => (
-                  <li key={item} className="is-size-5">{item}</li>
-                ))}
-              </ul>
-            </div>
+        <div className="columns industries-served">
+          <div className="column is-3">
+            <h2>{industriesserved.heading}</h2>
+            <p>{industriesserved.description}</p>
           </div>
-          <div className="columns service-areas">
-            <div className="column is-3">
-              <h2>{serviceareas.heading}</h2>
-            </div>
-            <div className="column is-offset-1 is-4">
-              <ul>
-                {serviceareas.items1.map((item) => (
-                  <li key={item} className="is-size-5">{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="column is-4">
-              <ul>
-                {serviceareas.items2.map((item) => (
-                  <li key={item} className="is-size-5">{item}</li>
-                ))}
-              </ul>
-            </div>
+          <div className="column is-offset-1 is-4">
+            <ul>
+              {industriesserved.items1.map((item) => (
+                <li key={item} className="is-size-5">{item}</li>
+              ))}
+            </ul>
           </div>
+          <div className="column is-4">
+            <ul>
+              {industriesserved.items2.map((item) => (
+                <li key={item} className="is-size-5">{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="columns service-areas">
+          <div className="column is-3">
+            <h2>{serviceareas.heading}</h2>
+          </div>
+          <div className="column is-offset-1 is-4">
+            <ul>
+              {serviceareas.items1.map((item) => (
+                <li key={item} className="is-size-5">{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="column is-4">
+            <ul>
+              {serviceareas.items2.map((item) => (
+                <li key={item} className="is-size-5">{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <PreviewCompatibleImage imageInfo={bottomcta.image} />
     <section className="section section--gradient bottom-cta">
       <div className="container">
-          <div className="columns">
-            <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
-              <div className="bottom-cta-text">
-                <h2>{bottomcta.header}</h2>
-                <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
-              </div>
+        <div className="columns">
+          <div className="column has-text-centered is-10" style={{maxWidth: '500px', margin:'auto'}}>
+            <div className="bottom-cta-text">
+              <h2>{bottomcta.header}</h2>
+              <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
             </div>
           </div>
+        </div>
       </div>
     </section>
     <div className="ft-modal">
       <div className="container">
-          <div className={`popup-form--wrapper ${isActive ? "is-active" : "" }` }>
+        {isActive && (
+          <div className="popup-form--wrapper is-active">
             <div className="popup-form--container">
-              <button className={`close-button ${!isActive ? " " : "is-active"}` } onClick={() => setActive(!isActive)}>
-                <div>X</div>
+              <div className="popup-form--header">Contact us for {title}</div>
+              <button className="close-button" onClick={() => setActive(!isActive)}>
+                <div>×</div>
               </button>
               <div className="container">
-                  <div className="popup-form--content">
-                    <HvacForm />
-                  </div>
+                <div className="popup-form--content">
+                  <HvacForm />
+                </div>
               </div>
             </div>
           </div>
+        )}
       </div>
     </div>
   </div>
