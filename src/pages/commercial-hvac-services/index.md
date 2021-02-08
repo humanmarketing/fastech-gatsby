@@ -75,6 +75,29 @@ serviceareas:
     - Commercial HVAC installation
     - Commercial duct cleaning
     - HVAC Ductwork
+serviceareamap:
+  heading: Locations
+  locations:
+    - name: Sacramento
+      counties:
+        - Sacramento County
+        - El Dorado County
+        - Solano County
+        - Yolo County
+        - San Joaquin County
+        - Placer County
+    - name: Buena Park
+      counties:
+        - Orange County
+        - Los Angeles County
+        - San Bernardino County
+        - Riverside County
+    - name: San Diego
+      counties:
+        - San Diego County
+        - Imperial County
+        - Riverside County
+  map_image: /img/ft-cali-location-map-2x.png
 bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your Commercial HVAC Services?
