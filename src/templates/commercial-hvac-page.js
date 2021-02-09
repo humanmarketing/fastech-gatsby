@@ -345,11 +345,6 @@ export const commercialHvacPageQuery = graphql`
           items2
         }
         serviceareamap {
-          heading
-          locations {
-            name
-            counties
-          }
           map_image {
             childImageSharp {
               fluid(maxWidth: 608, quality: 64) {

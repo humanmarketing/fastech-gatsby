@@ -1,12 +1,41 @@
 import React from 'react'
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
+const locations = [
+  {
+    name: 'Sacramento',
+    counties: [
+      'Sacramento County',
+      'El Dorado County',
+      'Solano County',
+      'Yolo County',
+      'San Joaquin County',
+      'Placer County',
+    ]
+  }, {
+    name: 'Buena Park',
+    counties: [
+      'Orange County',
+      'Los Angeles County',
+      'San Bernardino County',
+      'Riverside County',
+    ]
+  }, {
+    name: 'San Diego',
+    counties: [
+      'San Diego County',
+      'Imperial County',
+      'Riverside County',
+    ]
+  }
+]
+
 export default ({ serviceareamap }) => {
-  let { heading, locations, map_image } = serviceareamap
+  let { map_image } = serviceareamap
 
   return (
     <div className="container service-area-map">
-      <h2>{heading}</h2>
+      <h2>Locations</h2>
 
       <div className="columns">
         <div className="column is-4">
