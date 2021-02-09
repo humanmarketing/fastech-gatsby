@@ -173,14 +173,14 @@ export const CommercialHvacPageTemplate = ({
               <h2>{industriesserved.heading}</h2>
               <p>{industriesserved.description}</p>
             </div>
-            <div className="column is-offset-1 is-4">
+            <div className="styled-list column is-offset-1 is-4">
               <ul>
                 {industriesserved.items1.map((item) => (
                   <li key={item} className="is-size-5">{item}</li>
                 ))}
               </ul>
             </div>
-            <div className="column is-4">
+            <div className="styled-list column is-4">
               <ul>
                 {industriesserved.items2.map((item) => (
                   <li key={item} className="is-size-5">{item}</li>
@@ -192,14 +192,14 @@ export const CommercialHvacPageTemplate = ({
             <div className="column is-3">
               <h2>{serviceareas.heading}</h2>
             </div>
-            <div className="column is-offset-1 is-4">
+            <div className="styled-list column is-offset-1 is-4">
               <ul>
                 {serviceareas.items1.map((item) => (
                   <li key={item} className="is-size-5">{item}</li>
                 ))}
               </ul>
             </div>
-            <div className="column is-4">
+            <div className="styled-list column is-4">
               <ul>
                 {serviceareas.items2.map((item) => (
                   <li key={item} className="is-size-5">{item}</li>
