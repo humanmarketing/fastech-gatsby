@@ -34,21 +34,6 @@ main:
     - Full installation, maintenance and upgrade services
     - 50+ years of experience in cooling and refrigeration
     - Increase equipment longevity & performance
-# pathogenfiltration:
-#   heading: Improve Indoor Air Quality With Pathogen Filtration
-#   subheading1: What is NPBI?
-#   text1: >
-#     Needlepoint bipolar ionization (NPBI) technology purifies indoor air, by eliminating airborne particles, pathogens and odors, including COVID-19. An independent lab test showed GPS air technology had a 90% rate of reduction of coronavirus particles.
-#   subheading2: What are the benefits?
-#   items:
-#     - Kills pathogens, including bacteria, viruses & mold
-#     - Energy savings up to 30%
-#     - Neutralizes odor
-#     - Produces zero ozone or harmful byproducts
-#   subheading3: Do I need to replace my entire HVAC system?
-#   text3: >
-#     No. GPS technology can be installed in most HVAC systems.
-#   image: /img/hvac-graph-npbi-data.png
 industriesserved:
   heading: Industries Served
   description: >
@@ -73,6 +58,8 @@ serviceareas:
     - Environmental & server rooms
     - Agricultural climate control (Wineries, produce & more)
     - Ice machines
+serviceareamap:
+  map_image: /img/ft-cali-location-map-2x.png
 bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your Commercial Refrigeration Services?

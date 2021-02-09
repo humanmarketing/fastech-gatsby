@@ -73,6 +73,8 @@ serviceareas:
   items2:
     - Environmental & server rooms
     - Agricultural climate control (Wineries, produce & more)
+serviceareamap:
+  map_image: /img/ft-cali-location-map-2x.png
 bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your HVAC or Refrigeration Services?

@@ -7,6 +7,7 @@ import HvacForm from '../components/HvacForm'
 import IconText from '../components/IconText'
 import PhoneNumber from '../components/PhoneNumber'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import ServiceAreaMap from '../components/LP/ServiceAreaMap'
 
 export const CommercialHvacPageTemplate = ({
   title,
@@ -21,6 +22,7 @@ export const CommercialHvacPageTemplate = ({
   pathogenfiltration,
   industriesserved,
   serviceareas,
+  serviceareamap,
   bottomcta,
   helmet,
 }) => {
@@ -164,47 +166,53 @@ export const CommercialHvacPageTemplate = ({
       </section>
     )}
     <section className="section section--gradient has-text-white-ter industries">
-      <div className="container">
-        <div className="columns industries-served">
-          <div className="column is-3">
-            <h2>{industriesserved.heading}</h2>
-            <p>{industriesserved.description}</p>
+      <div className="industries-service">
+        <div class="container">
+          <div className="columns industries-served">
+            <div className="column is-3">
+              <h2>{industriesserved.heading}</h2>
+              <p>{industriesserved.description}</p>
+            </div>
+            <div className="column is-offset-1 is-4">
+              <ul>
+                {industriesserved.items1.map((item) => (
+                  <li key={item} className="is-size-5">{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="column is-4">
+              <ul>
+                {industriesserved.items2.map((item) => (
+                  <li key={item} className="is-size-5">{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="column is-offset-1 is-4">
-            <ul>
-              {industriesserved.items1.map((item) => (
-                <li key={item} className="is-size-5">{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="column is-4">
-            <ul>
-              {industriesserved.items2.map((item) => (
-                <li key={item} className="is-size-5">{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <div className="columns service-areas">
-          <div className="column is-3">
-            <h2>{serviceareas.heading}</h2>
-          </div>
-          <div className="column is-offset-1 is-4">
-            <ul>
-              {serviceareas.items1.map((item) => (
-                <li key={item} className="is-size-5">{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="column is-4">
-            <ul>
-              {serviceareas.items2.map((item) => (
-                <li key={item} className="is-size-5">{item}</li>
-              ))}
-            </ul>
+          <div className="columns service-areas">
+            <div className="column is-3">
+              <h2>{serviceareas.heading}</h2>
+            </div>
+            <div className="column is-offset-1 is-4">
+              <ul>
+                {serviceareas.items1.map((item) => (
+                  <li key={item} className="is-size-5">{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="column is-4">
+              <ul>
+                {serviceareas.items2.map((item) => (
+                  <li key={item} className="is-size-5">{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+
+      {serviceareamap && (
+        <ServiceAreaMap serviceareamap={serviceareamap} />
+      )}
     </section>
     <PreviewCompatibleImage imageInfo={bottomcta.image} />
     <section className="section section--gradient bottom-cta">
@@ -214,6 +222,9 @@ export const CommercialHvacPageTemplate = ({
             <div className="bottom-cta-text">
               <h2>{bottomcta.header}</h2>
               <button className="has-text-weight-bold btn primary-btn" onClick={() => setActive(!isActive)}>{bottomcta.cta}</button>
+              <div className="tel-num">
+                <PhoneNumber number="714-889-8851" />
+              </div>
             </div>
           </div>
         </div>
@@ -332,6 +343,15 @@ export const commercialHvacPageQuery = graphql`
           heading
           items1
           items2
+        }
+        serviceareamap {
+          map_image {
+            childImageSharp {
+              fluid(maxWidth: 608, quality: 64) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
         bottomcta {
           image {

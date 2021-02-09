@@ -75,6 +75,8 @@ serviceareas:
     - Commercial HVAC installation
     - Commercial duct cleaning
     - HVAC Ductwork
+serviceareamap:
+  map_image: /img/ft-cali-location-map-2x.png
 bottomcta:
   image: /img/FT-2020-hvac-footer-lines.png
   header: Ready to Upgrade Your Commercial HVAC Services?
