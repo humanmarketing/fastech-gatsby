@@ -289,13 +289,21 @@ $menu-label-color: $white-ter
     h2
       color: white
       font-size: 44px !important
-    > ul
-      list-style: none
-      border-left: 1px solid $green
-      padding-left: 18px
+    .styled-list
+      padding-top: 0
+      padding-bottom: 0
+      +mobile
+        & + .styled-list ul
+          padding-top: 1.5em;
+      ul
+        list-style: none
+        margin-top: 0
+        padding: 0 0 0 18px
+        border-left: 1px solid $green
       li
         line-height: 1.1em
-        margin-bottom: 1em
+        &:not(:last-child)
+          margin-bottom: 1em
     .service-areas
       margin-top: 50px
       .column:nth-of-type(1)
@@ -341,8 +349,6 @@ $menu-label-color: $white-ter
       margin-top: 20px
       font-weight: bold
       font-size: 18px
-      a
-        color: inherit
   footer
     padding-bottom: 2rem
     .container
