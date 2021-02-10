@@ -1,4 +1,4 @@
-@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma"
 
 // Config vars
 // Kaldi logo brand color: #FD461E
@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, a
 
 p, span, ul, li, strong
   font-family: $raleway
+
++mobile
+  .navbar
+    position: sticky
+    top: 0
 
 .navbar .navbar-burger
   background: none
@@ -157,9 +162,6 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0
 
 
-@import "~bulma"
-
-
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
@@ -213,6 +215,8 @@ $menu-label-color: $white-ter
     h3
       color: white
       font-size: 46px
+      +mobile
+        font-size: 32px
     ul
       list-style: none
       margin-left: 0
@@ -278,17 +282,28 @@ $menu-label-color: $white-ter
       margin-top: 100px
       margin-bottom: 20px
   .industries
+    padding: 3rem 0
     background-color: $darkblue
+    +mobile
+      padding: 3rem 1.5rem
     h2
       color: white
       font-size: 44px !important
-    ul
-      list-style: none
-      border-left: 1px solid $green
-      padding-left: 18px
+    .styled-list
+      padding-top: 0
+      padding-bottom: 0
+      +mobile
+        & + .styled-list ul
+          padding-top: 1.5em;
+      ul
+        list-style: none
+        margin-top: 0
+        padding: 0 0 0 18px
+        border-left: 1px solid $green
       li
         line-height: 1.1em
-        margin-bottom: 1em
+        &:not(:last-child)
+          margin-bottom: 1em
     .service-areas
       margin-top: 50px
       .column:nth-of-type(1)
@@ -296,12 +311,44 @@ $menu-label-color: $white-ter
         align-items: center
         h2
           margin-bottom: 0
+    .service-area-map
+      margin-top: 40px
+    .service-area-location
+      counter-increment: loc
+      margin-bottom: 40px
+      h3
+        display: flex
+        align-items: center
+        color: #fff
+        &::before
+          content: counter(loc)
+          display: grid
+          place-content: center
+          width: 1.3em
+          height: 1.3em
+          border-radius: 1.3em
+          margin-right: 10px
+          padding: 5px
+          background-color: $green
+      li
+        list-style-type: none
+        display: flex;
+        &::before
+          content: '—'
+          color: $green
+          margin-right: 10px
+    .service-area-map-image
+      max-width: 650px;
   .bottom-cta-text
     margin-top: 20px
     h2
       margin-bottom: 35px
       font-weight: normal
-      font-size: 24px
+      font-size: 24
+    .tel-num
+      margin-top: 20px
+      font-weight: bold
+      font-size: 18px
   footer
     padding-bottom: 2rem
     .container
@@ -328,8 +375,8 @@ $menu-label-color: $white-ter
       background-position: -50px center
       background-repeat: no-repeat
       background-size: 110px
-    .industries
-      padding: 6rem 1.5rem
+    .industries-service
+      padding: 3rem 0
       background-image: url(/img/FT-2020-hvac-spiral-right.png)
       background-position: calc(100% - -50px) center
       background-repeat: no-repeat
