@@ -1,11 +1,4 @@
 import React from 'react'
-// import { navigate } from 'gatsby-link'
-
-// function encode(data) {
-//   return Object.keys(data)
-//     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-//     .join('&')
-// }
 
 /* eslint-disable */
 
@@ -35,19 +28,19 @@ export default class HvacForm extends React.Component {
           <div id="mc_embed_signup_scroll">
           <div className="mc-field-group size1of2">
             <label htmlFor="mce-FNAME">First Name</label>
-            <input type="text"  name="FNAME" className="required" id="mce-FNAME" onChange={this.handleChange} required={true} />
+            <input type="text"  name="FNAME" className="required" id="mce-FNAME" onChange={this.handleChange} required />
           </div>
           <div className="mc-field-group size1of2">
             <label htmlFor="mce-LNAME">Last Name</label>
-            <input type="text"  name="LNAME" className="required" id="mce-LNAME" onChange={this.handleChange} required={true}/>
+            <input type="text"  name="LNAME" className="required" id="mce-LNAME" onChange={this.handleChange} required/>
           </div>
           <div className="mc-field-group size1of2">
             <label htmlFor="mce-PHONE">Phone Number</label>
-            <input type="text" name="PHONE" className="required"  id="mce-PHONE" onChange={this.handleChange} required={true} />
+            <input type="text" name="PHONE" className="required"  id="mce-PHONE" onChange={this.handleChange} required />
           </div>
           <div className="mc-field-group size1of2">
             <label htmlFor="mce-EMAIL">Email Address</label>
-            <input type="email"  name="EMAIL" className="required email" id="mce-EMAIL" onChange={this.handleChange} required={true} />
+            <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" onChange={this.handleChange} required />
           </div>
           <div className="mc-field-group">
             <label htmlFor="mce-COMPANY">Company <small>(optional)</small></label>
@@ -61,11 +54,11 @@ export default class HvacForm extends React.Component {
             <label htmlFor="mce-MMERGE5">Services Needed <small>(optional)</small></label>
             <div className="select-with-arrow">
               <select name="MMERGE5" className="" id="mce-MMERGE5">
-                <option ></option>
+                <option value=""></option>
                 <option value="HVAC">HVAC</option>
                 <option value="Refrigeration">Refrigeration</option>
                 <option value="Unit Replacement">Unit Replacement</option>
-                <option value="New Contruction">New Contruction</option>
+                <option value="New Construction">New Construction</option>
               </select>
             </div>
           </div>
@@ -73,7 +66,7 @@ export default class HvacForm extends React.Component {
             <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
             <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
           </div>
-          <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true"><input type="text" name="b_1b5912a7a12178df95b8ef6cc_f0c1cabfde" tabIndex="-1" /></div>
+          <div style={{ position: 'absolute', left: -5000 }} aria-hidden="true"><input type="text" name="b_1b5912a7a12178df95b8ef6cc_f0c1cabfde" tabIndex="-1" /></div>
           <div className="clear"><input type="submit" value="Contact now" name="subscribe" id="mc-embedded-subscribe" className="submit-btn"/></div>
           </div>
         </form>
