@@ -114,11 +114,6 @@ export const CommercialHvacPageTemplate = ({
         </div>
       </div>
     </section>
-    {serviceareamap && (
-      <section className="section section--gradient has-text-white-ter industries">
-        <ServiceAreaMap serviceareamap={serviceareamap} />
-      </section>
-    )}
     {pathogenfiltration && (
       <section className="section section--gradient pathogen-filtration">
         <div className="container">
@@ -214,6 +209,10 @@ export const CommercialHvacPageTemplate = ({
           </div>
         </div>
       </div>
+
+      {serviceareamap && (
+        <ServiceAreaMap serviceareamap={serviceareamap} />
+      )}
     </section>
     <PreviewCompatibleImage imageInfo={bottomcta.image} />
     <section className="section section--gradient bottom-cta">
