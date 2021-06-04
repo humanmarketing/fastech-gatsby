@@ -47,13 +47,13 @@ export default class HvacForm extends React.Component {
             <input type="text"  name="COMPANY" className="" id="mce-COMPANY" onChange={this.handleChange}/>
           </div>
           <div className="mc-field-group">
-            <label htmlFor="mce-ZIPCODE">Zip Code <small>(optional)</small></label>
-            <input type="text" name="ZIPCODE" className="" id="mce-ZIPCODE" onChange={this.handleChange}/>
+            <label htmlFor="mce-MMERGE5">Zip Code <small>(optional)</small></label>
+            <input type="text" name="MMERGE5" className="" id="mce-MMERGE5" onChange={this.handleChange}/>
           </div>
           <div className="mc-field-group">
-            <label htmlFor="mce-MMERGE5">Services Needed <small>(optional)</small></label>
+            <label htmlFor="mce-MMERGE6">Services Needed <small>(optional)</small></label>
             <div className="select-with-arrow">
-              <select name="MMERGE5" className="" id="mce-MMERGE5">
+              <select name="MMERGE6" className="" id="mce-MMERGE6">
                 <option value=""></option>
                 <option value="HVAC">HVAC</option>
                 <option value="Refrigeration">Refrigeration</option>
